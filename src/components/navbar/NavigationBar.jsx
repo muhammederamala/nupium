@@ -4,6 +4,8 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
+import logoImage from '../../assets/images/logoimage.png'
+
 import styles from "./NavigationBar.module.css";
 import CustomDropdown from "../CustomDropDown/CustomDropdown";
 
@@ -36,7 +38,7 @@ const NavigationBar = () => {
     >
       <Container>
         <Navbar.Brand className={`${styles.navbarBrand}`} href="#home">
-          Your Brand
+          <img src={logoImage} style={{ maxWidth: '12rem', maxHeight: '100%' }} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <FontAwesomeIcon icon={faBars} className={styles.customToggler} />

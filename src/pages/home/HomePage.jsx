@@ -232,7 +232,7 @@ function HomePage() {
               <div className={styles.imageContainer}>
                 <div className={`${styles.imageOverlay} px-4`}>
                   <span>
-                    <h1 className={styles.overlayHeading}>House Cleaning</h1>
+                    <h1 className={styles.overlayHeading}>Electronics Maintenance</h1>
                     <p className={styles.overlayContent}>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -249,7 +249,7 @@ function HomePage() {
               <div className={styles.imageContainer}>
                 <div className={`${styles.imageOverlay} px-4`}>
                   <span>
-                    <h1 className={styles.overlayHeading}>Office Cleaning</h1>
+                    <h1 className={styles.overlayHeading}>Plumbing Maintenance</h1>
                     <p className={styles.overlayContent}>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -266,7 +266,7 @@ function HomePage() {
               <div className={styles.imageContainer}>
                 <div className={`${styles.imageOverlay} px-4`}>
                   <span>
-                    <h1 className={styles.overlayHeading}>Outsource Work</h1>
+                    <h1 className={styles.overlayHeading}>Computer Maintenance</h1>
                     <p className={styles.overlayContent}>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Sed do eiusmod tempor incididunt ut labore et dolore magna
