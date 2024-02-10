@@ -1,0 +1,39 @@
+.testimonialSlider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.testimonial {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+}
+
+.testimonial p {
+  margin: 0;
+}
+
+.prevButton,
+.nextButton {
+  border: none;
+  font-weight: 800;
+  background-color: white;
+  color: #e07604;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #e07604;
+  transition: background-color 0.3s ease;
+}
+
+.prevButton:hover,
+.nextButton:hover {
+    background-color: rgba(230, 131, 56, 0.2);
+}

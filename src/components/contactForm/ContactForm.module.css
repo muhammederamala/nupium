@@ -1,0 +1,40 @@
+.form {
+  color: white;
+}
+
+.formLabel {
+  color: white;
+}
+
+.formGroup {
+  margin-top: 2rem;
+}
+
+.formControl {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-color: white !important;
+  border: none;
+  border-bottom: 3px solid white;
+  height: 5rem;
+}
+
+.formControl::placeholder {
+  color: white;
+}
+
+.formControl:focus {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.btnPrimary {
+  background-color: #e07604;
+  color: white;
+  transition: transform 0.3s;
+}
+
+.btnPrimary:hover {
+  transform: scale(1.03);
+  background-color: white;
+  color: #e07604;
+}

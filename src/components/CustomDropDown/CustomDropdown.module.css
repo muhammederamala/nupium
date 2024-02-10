@@ -1,0 +1,88 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 7rem;
+  font-family: system-ui;
+}
+
+.dropdown:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+}
+
+.scrolledDropdown {
+  position: relative;
+  display: inline-block;
+  width: 7rem;
+  font-family: system-ui;
+}
+
+.scrolledDropdown:hover .dropdownMenu {
+  display: block;
+}
+
+.scrolledDropdown:hover {
+  background-color: #e07604;
+  color: #e07604;
+}
+
+.dropdownButton {
+  background-color: transparent;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.scrolledDropdownButton {
+  background-color: transparent;
+  color: black;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.scrolledDropdownButton:hover {
+  color: white;
+}
+
+.dropdownMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  border-radius: 5%;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdownMenu {
+  display: block;
+}
+
+.dropdownItem {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdownItem:hover {
+  background-color: #e07604;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .dropdownButton {
+    color: black;
+    background-color: transparent;
+  }
+  .dropdownButton:hover {
+    background-color: transparent;
+    color: white;
+  }
+  .dropdown:hover {
+    background-color: #e07604;
+  }
+}

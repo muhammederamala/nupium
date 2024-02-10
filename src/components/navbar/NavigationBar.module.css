@@ -1,0 +1,38 @@
+.navbarCustom {
+  background-color: transparent !important;
+  color: white;
+}
+
+.navbarCustomScrolled {
+  background-color: white;
+  color: black;
+}
+
+.navbarCustom .navLink {
+  color: white !important;
+}
+
+.navbarCustomScrolled .navLink {
+  color: black !important;
+}
+
+.customToggler {
+  color: #e07604;
+}
+
+@media (max-width: 768px) {
+  .navbarCustom {
+    background-color: white !important;
+    color: black;
+  }
+
+  .navLink,
+  .navbarBrand,
+  .navbar-text {
+    color: black !important;
+  }
+
+  .phoneNumber {
+    color: black;
+  }
+}
