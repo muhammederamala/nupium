@@ -40,19 +40,19 @@ const TestimonialSlider = () => {
   };
 
   return (
-    <Container>
+    <Container className="mt-4">
       <Row className="d-flex justify-content-center">
-        <Col xs={8}>
+        <Col md={8} xs={12}>
           <Container>
             <Row>
-              <Col xs={1}>
+              <Col md={1} xs={2}>
                 <FontAwesomeIcon
                   onClick={nextSlide}
                   className={styles.prevButton}
                   icon={faArrowLeft}
                 />
               </Col>
-              <Col className="d-flex justify-content-center" xs={10}>
+              <Col className="d-flex justify-content-center" md={10} xs={8}>
                 <div className={styles.testimonial}>
                   <p>{testimonials[currentSlide].text}</p>
                   <p>- {testimonials[currentSlide].author}</p>

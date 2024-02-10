@@ -23,9 +23,9 @@ import TestimonialSlider from "../../components/testimonials/Testimonials";
 
 function HomePage() {
   const welcomeTextValue = [
-    "House Cleaning",
-    "Room Cleaning",
-    "Office Cleaning",
+    "Electronics Maintenance",
+    "Plumbing Maintenance",
+    "Computer Maintenance",
   ];
 
   const [reachedSection4, setReachedSection4] = useState(false);
@@ -224,6 +224,9 @@ function HomePage() {
       </section>
       <section style={{ marginTop: "5rem", marginBottom: "5rem" }}>
         <Container>
+          <Row className="d-flex text-center">
+            <h1 style={{ fontWeight: "800" }}>Our Services</h1>
+          </Row>
           <Row>
             <Col style={{ marginTop: "2rem" }} md={4}>
               <div className={styles.imageContainer}>
@@ -495,10 +498,10 @@ function HomePage() {
           </Row>
         </Container>
       </section>
-      <section style={{ marginTop: "7rem" }}>
+      <section style={{ marginTop: "4rem" }}>
         <Container>
           <Row>
-            <Col xs={6} className="px-2">
+            <Col md={6} className="px-2" style={{ marginTop: "4rem" }}>
               <div className={`${styles.section6box}`}>
                 <Container>
                   <Row className="d-flex justify-content-center">
@@ -536,7 +539,7 @@ function HomePage() {
                 </Container>
               </div>
             </Col>
-            <Col xs={6} className="px-2">
+            <Col md={6} className="px-2" style={{ marginTop: "4rem" }}>
               <div className={`${styles.section6box}`}>
                 <Container>
                   <Row className="d-flex justify-content-center">
@@ -577,7 +580,7 @@ function HomePage() {
           </Row>
         </Container>
       </section>
-      <section style={{ marginTop: "7rem" }}>
+      <section style={{ marginTop: "7rem", marginBottom: "5rem" }}>
         <Container>
           <Row>
             <Col className="d-flex justify-content-center" xs={12}>
