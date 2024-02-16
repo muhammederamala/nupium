@@ -1,8 +1,9 @@
 .dropdown {
   position: relative;
   display: inline-block;
-  width: 7rem;
   font-family: system-ui;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .dropdown:hover {
@@ -13,7 +14,8 @@
 .scrolledDropdown {
   position: relative;
   display: inline-block;
-  width: 7rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   font-family: system-ui;
 }
 
@@ -22,8 +24,7 @@
 }
 
 .scrolledDropdown:hover {
-  background-color: #e07604;
-  color: #e07604;
+  background-color: #02abb6;
 }
 
 .dropdownButton {
@@ -69,7 +70,7 @@
 }
 
 .dropdownItem:hover {
-  background-color: #e07604;
+  background-color: #02abb6;
   color: white;
 }
 

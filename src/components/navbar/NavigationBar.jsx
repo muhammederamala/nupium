@@ -3,8 +3,14 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFacebook,
+  faInstagram,
+  faThreads,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
-import logoImage from '../../assets/images/logoimage.png'
+import logoImage from "../../assets/images/logoimage.png";
 
 import styles from "./NavigationBar.module.css";
 import CustomDropdown from "../CustomDropDown/CustomDropdown";
@@ -38,7 +44,10 @@ const NavigationBar = () => {
     >
       <Container>
         <Navbar.Brand className={`${styles.navbarBrand}`} href="#home">
-          <img src={logoImage} style={{ maxWidth: '12rem', maxHeight: '100%' }} />
+          <img
+            src={logoImage}
+            style={{ maxWidth: "12rem", maxHeight: "100%" }}
+          />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <FontAwesomeIcon icon={faBars} className={styles.customToggler} />
@@ -48,35 +57,51 @@ const NavigationBar = () => {
           className="justify-content-center"
         >
           <Nav className="mx-auto">
+            <div
+              className={`d-flex align-items-center px-2 ${
+                scrolled ? styles.scrolledNavItem : styles.navItem
+              }`}
+            >
+              Subscribe Now
+            </div>
             <CustomDropdown
               scrolled={scrolled}
-              title="Home"
-              options={["Option 1", "Option 2", "Option 3"]}
+              title="Dashboard Login"
+              options={["Partner Login", "User Login"]}
             />
-            <CustomDropdown
-              scrolled={scrolled}
-              title="About"
-              options={["Option 1", "Option 2", "Option 3"]}
-            />
-            <CustomDropdown
-              scrolled={scrolled}
-              title="Services"
-              options={["Option 1", "Option 2", "Option 3"]}
-            />
-            <CustomDropdown
-              scrolled={scrolled}
-              title="Pages"
-              options={["Option 1", "Option 2", "Option 3"]}
-            />
-            <CustomDropdown
-              scrolled={scrolled}
-              title="Contact Us"
-              options={["Option 1", "Option 2", "Option 3"]}
-            />
+            <div
+              className={`d-flex align-items-center px-2 ${
+                scrolled ? styles.scrolledNavItem : styles.navItem
+              }`}
+            >
+              Download
+            </div>
+            <div
+              className={`d-flex align-items-center px-2 ${
+                scrolled ? styles.scrolledNavItem : styles.navItem
+              }`}
+            >
+              Blogs
+            </div>
           </Nav>
-          <Navbar.Text className={`${styles.phoneNumber}`}>
-            Phone: 123-456-7890
-          </Navbar.Text>
+          <div>
+            <FontAwesomeIcon
+              className={`mx-2 ${styles.socialMediaIcons}`}
+              icon={faInstagram}
+            />
+            <FontAwesomeIcon
+              className={`mx-2 ${styles.socialMediaIcons}`}
+              icon={faTwitter}
+            />
+            <FontAwesomeIcon
+              className={`mx-2 ${styles.socialMediaIcons}`}
+              icon={faThreads}
+            />
+            <FontAwesomeIcon
+              className={`mx-2 ${styles.socialMediaIcons}`}
+              icon={faFacebook}
+            />
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>

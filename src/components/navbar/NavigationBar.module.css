@@ -36,3 +36,36 @@
     color: black;
   }
 }
+
+.navItem {
+  display: block;
+  font-weight: 700;
+  margin-right: 1rem;
+}
+
+.navItem:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.scrolledNavItem {
+  display: block;
+  font-weight: 700;
+  margin-right: 1rem;
+}
+
+.scrolledNavItem:hover {
+  cursor: pointer;
+  background-color: #02abb6;
+  color: white;
+}
+
+.socialMediaIcons {
+  transition: transform 0.2s;
+}
+
+.socialMediaIcons:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+}
