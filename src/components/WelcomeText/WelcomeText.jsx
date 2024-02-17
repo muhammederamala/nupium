@@ -21,7 +21,7 @@ const WelcomeText = ({ textArray, animationDelay }) => {
     <h1
       key={currentText}
       className={`${styles.welcomeText} animate__animated animate__fadeInUp`}
-      style={{ color: "#e07604" }}
+      style={{ color: "#02abb6" }}
     >
       {currentText}
     </h1>

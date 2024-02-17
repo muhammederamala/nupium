@@ -6,7 +6,7 @@ const EnquiryForm = () => {
   return (
     <Container
       style={{
-        border: "3px solid #e07604",
+        border: "3px solid #02abb6",
         padding: "1rem",
         borderRadius: "10px",
       }}
@@ -35,7 +35,7 @@ const EnquiryForm = () => {
           variant="primary"
           type="submit"
           style={{
-            backgroundColor: "#e07604",
+            backgroundColor: "#02abb6",
             border: "none",
             marginTop: "1rem",
           }}

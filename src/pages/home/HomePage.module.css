@@ -44,7 +44,7 @@
 }
 
 .milestonesNumber {
-  color: #e07604;
+  color: #02abb6;
   font-size: 2.7rem;
   font-weight: 800;
 }
@@ -104,7 +104,7 @@
 }
 
 .overlayButton {
-  background-color: #e07604;
+  background-color: #02abb6;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -129,7 +129,7 @@
 
 .section3icons {
   font-size: 4rem;
-  color: #e07604;
+  color: #02abb6;
 }
 
 .section3subHeading {
@@ -140,7 +140,7 @@
 /* section 4 */
 
 .section4circle {
-  background-color: #e07604;
+  background-color: #02abb6;
   height: 5rem;
   width: 5rem;
   color: white;
@@ -179,8 +179,8 @@
 .section5countriesButton {
   padding: 5px;
   border-radius: 5px;
-  border: 1px solid #e07604;
-  color: #e07604;
+  border: 1px solid #02abb6;
+  color: #02abb6;
   background-color: white;
   font-weight: 800;
   transition: transform 0.5s;
@@ -190,12 +190,12 @@
   cursor: pointer;
   transform: scale(1.05);
   color: white;
-  background-color: #e07604;
+  background-color: #02abb6;
 }
 
 .section5icons {
-  font-size: 2.5rem;
-  color: #e07604;
+  font-size: 1.5rem;
+  color: #02abb6;
 }
 
 /* section 6  */
@@ -208,7 +208,7 @@
 .section6heading {
   margin-top: 4rem;
   padding: 2rem;
-  background-color: #e07604;
+  background-color: #02abb6;
   color: white;
   font-weight: 800;
 }

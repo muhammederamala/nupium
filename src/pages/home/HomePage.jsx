@@ -6,6 +6,7 @@ import {
   faHouseCircleCheck,
   faLocationDot,
   faSquareCheck,
+  faArrowDown,
 } from "@fortawesome/free-solid-svg-icons";
 
 import mainVideo from "../../assets/videos/main.mp4";
@@ -23,6 +24,8 @@ import WelcomeText from "../../components/WelcomeText/WelcomeText";
 import Counter from "../../components/Counter/Counter";
 import EnquiryForm from "../../components/enquiryForm/EnquiryForm";
 import TestimonialSlider from "../../components/testimonials/Testimonials";
+import ServicesSection from "../../components/servicesSection/ServicesSection";
+import BenifitsTable from "../../components/BenifitsTable/BenifitsTable";
 
 function HomePage() {
   const welcomeTextValue = [
@@ -36,7 +39,7 @@ function HomePage() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const threshold = 1750;
+      const threshold = 2400;
       if (scrollPosition >= threshold) {
         setReachedSection4(true);
       } else {
@@ -86,7 +89,7 @@ function HomePage() {
       case "Asia Pacific":
         return asiaPacificCountries.map((country) => (
           <Container>
-            <Row className="mt-4">
+            <Row className="mt-3">
               <Col xs={2}>
                 <FontAwesomeIcon
                   className={`${styles.section5icons}`}
@@ -104,7 +107,7 @@ function HomePage() {
       case "Europe":
         return europeCountries.map((country) => (
           <Container>
-            <Row className="mt-4">
+            <Row className="mt-3">
               <Col xs={2}>
                 <FontAwesomeIcon
                   className={`${styles.section5icons}`}
@@ -122,7 +125,7 @@ function HomePage() {
       case "North America":
         return northAmericaCountries.map((country) => (
           <Container>
-            <Row className="mt-4">
+            <Row className="mt-3">
               <Col xs={2}>
                 <FontAwesomeIcon
                   className={`${styles.section5icons}`}
@@ -164,8 +167,8 @@ function HomePage() {
                           textArray={welcomeTextValue}
                           animationDelay={3000}
                         />
-                        <h1 className={`${styles.welcomeText}`}>Business</h1>
-                        <h1 className={`${styles.welcomeText}`}>Services</h1>
+                        <h1 className={`${styles.welcomeText}`}>Facility</h1>
+                        <h1 className={`${styles.welcomeText}`}>Management</h1>
                       </div>
                     </Col>
                   </Row>
@@ -174,214 +177,64 @@ function HomePage() {
                       <Card className={`${styles.milestones}`}>
                         <Card.Body style={{ padding: "0px" }}>
                           <h1 className={`${styles.milestonesNumber}`}>
-                            <Counter finalValue={15} duration={750} />+
+                            5000+
+                            {/* <Counter finalValue={5000} duration={750} />+ */}
                           </h1>
                         </Card.Body>
                         <Card.Footer
                           style={{ padding: "0px" }}
                           className={`${styles.milestonesText}`}
                         >
-                          Our Services
+                          Clients
                         </Card.Footer>
                       </Card>
                     </Col>
-                    <Col xs={4}>
+                    <Col xs={3}>
                       <Card className={`${styles.milestones}`}>
                         <Card.Body style={{ padding: "0px" }}>
                           <h1 className={`${styles.milestonesNumber}`}>
-                            <Counter finalValue={50} duration={750} />+
+                            300+
+                            {/* <Counter finalValue={50} duration={750} />+ */}
                           </h1>
                         </Card.Body>
                         <Card.Footer
                           style={{ padding: "0px" }}
                           className={`${styles.milestonesText}`}
                         >
-                          Professional
+                          Team size
                         </Card.Footer>
                       </Card>
                     </Col>
-                    <Col xs={4}>
+                    <Col xs={5}>
                       <Card className={`${styles.milestones}`}>
                         <Card.Body style={{ padding: "0px" }}>
-                          <h1 className={`${styles.milestonesNumber}`}>
-                            <Counter finalValue={500} duration={750} />+
+                          <h1
+                            style={{ fontSize: "2.3rem" }}
+                            className={`${styles.milestonesNumber}`}
+                          >
+                            Operations
                           </h1>
                         </Card.Body>
                         <Card.Footer
-                          style={{ padding: "0px" }}
+                          style={{ padding: "0px", marginTop: "0.rem" }}
                           className={`${styles.milestonesText}`}
                         >
-                          Happy Clients
+                          Globally
                         </Card.Footer>
                       </Card>
                     </Col>
                   </Row>
                 </Container>
               </Col>
-              <Col style={{ marginTop: "5rem" }} md={6}>
+              {/* <Col style={{ marginTop: "5rem" }} md={6}>
                 <ContactForm />
-              </Col>
+              </Col> */}
             </Row>
           </Container>
         </div>
       </section>
       <section style={{ marginTop: "5rem", marginBottom: "5rem" }}>
-        <Container>
-          <Row className="d-flex text-center">
-            <h1 style={{ fontWeight: "800" }}>Our Services</h1>
-          </Row>
-          <Row>
-            <Col style={{ marginTop: "2rem" }} md={4}>
-              <div className={styles.imageContainer}>
-                <div className={`${styles.imageOverlay} px-4`}>
-                  <span>
-                    <h1 className={styles.overlayHeading}>
-                      Electronics Maintenance
-                    </h1>
-                    <p className={styles.overlayContent}>
-                      Electrical & Electronics Maintenance refers to the ongoing
-                      care and upkeep of electrical systems and equipment in
-                      residential, commercial, and industrial settings.
-                      Electrical maintenance services are important for ensuring
-                      the safe and reliable operation of electrical systems and
-                      equipment, reducing the risk of electrical hazards, and
-                      minimizing downtime due to equipment failures. These
-                      services are performed on a regular basis or as needed
-                      based on the specific needs of the electrical system or
-                      equipment.
-                    </p>
-                    <button className={styles.overlayButton}>Learn More</button>
-                  </span>
-                </div>
-                <Image src={image1} fluid className={styles.image} />
-              </div>
-            </Col>
-            <Col style={{ marginTop: "2rem" }} md={4}>
-              <div className={styles.imageContainer}>
-                <div className={`${styles.imageOverlay} px-4`}>
-                  <span>
-                    <h1 className={styles.overlayHeading}>
-                      Plumbing Maintenance
-                    </h1>
-                    <p className={styles.overlayContent}>
-                      Plumbing Maintenance refer to the regular upkeep and
-                      repair of plumbing systems in residential, commercial, and
-                      industrial properties. Plumbing maintenance services
-                      entail a wide range of tasks, such as checking and
-                      tightening fittings and connections, inspecting and
-                      repairing pipes, replacing worn-out fixtures, and ensuring
-                      proper ventilation and drainage. Regular maintenance can
-                      help prevent major plumbing problems, increase the
-                      lifespan of plumbing systems, and improve the overall
-                      safety and health of occupants.
-                    </p>
-                    <button className={styles.overlayButton}>Learn More</button>
-                  </span>
-                </div>
-                <Image src={image2} fluid className={styles.image} />
-              </div>
-            </Col>
-            <Col style={{ marginTop: "2rem" }} md={4}>
-              <div className={styles.imageContainer}>
-                <div className={`${styles.imageOverlay} px-4`}>
-                  <span>
-                    <h1 className={styles.overlayHeading}>
-                      Computer Maintenance
-                    </h1>
-                    <p className={styles.overlayContent}>
-                      Electrical & Electronics Maintenance refers to the ongoing
-                      care and upkeep of electrical systems and equipment in
-                      residential, commercial, and industrial settings.
-                      Electrical maintenance services are important for ensuring
-                      the safe and reliable operation of electrical systems and
-                      equipment, reducing the risk of electrical hazards, and
-                      minimizing downtime due to equipment failures. These
-                      services are performed on a regular basis or as needed
-                      based on the specific needs of the electrical system or
-                      equipment.
-                    </p>
-                    <button className={styles.overlayButton}>Learn More</button>
-                  </span>
-                </div>
-                <Image src={image3} fluid className={styles.image} />
-              </div>
-            </Col>
-          </Row>
-          <Row className="mt-5">
-            <Col style={{ marginTop: "2rem" }} md={4}>
-              <div className={styles.imageContainer}>
-                <div className={`${styles.imageOverlay} px-4`}>
-                  <span>
-                    <h1 className={styles.overlayHeading}>
-                      Carpenter Services
-                    </h1>
-                    <p className={styles.overlayContent}>
-                      Carpenter Services refer to the regular upkeep and repair
-                      of wooden structures, furniture, and fixtures in
-                      residential, commercial, and industrial properties.
-                      Regular maintenance of wooden structures is important to
-                      prevent wear and tear, and deterioration due to weather,
-                      pests, and other factors. Carpenter maintenance services
-                      can also help increase the lifespan of wooden structures
-                      and fixtures, maintain their appearance and functionality,
-                      and improve the safety and comfort.
-                    </p>
-                    <button className={styles.overlayButton}>Learn More</button>
-                  </span>
-                </div>
-                <Image src={image4} fluid className={styles.image} />
-              </div>
-            </Col>
-            <Col style={{ marginTop: "2rem" }} md={4}>
-              <div className={styles.imageContainer}>
-                <div className={`${styles.imageOverlay} px-4`}>
-                  <span>
-                    <h1 className={styles.overlayHeading}>
-                      Cleaning Solutions
-                    </h1>
-                    <p className={styles.overlayContent}>
-                      Cleaning Solutions refer to the ongoing care and upkeep of
-                      indoor spaces, such as homes, offices, commercial
-                      buildings, and other facilities. Cleaning maintenance
-                      services are important for maintaining a clean and healthy
-                      indoor environment, promoting the well-being of occupants,
-                      and ensuring that indoor spaces remain safe and enjoyable
-                      to use. These services can be performed on a regular
-                      basis, such as daily or weekly, or as needed based on the
-                      specific needs of the indoor space.
-                    </p>
-                    <button className={styles.overlayButton}>Learn More</button>
-                  </span>
-                </div>
-                <Image src={image5} fluid className={styles.image} />
-              </div>
-            </Col>
-            <Col style={{ marginTop: "2rem" }} md={4}>
-              <div className={styles.imageContainer}>
-                <div className={`${styles.imageOverlay} px-4`}>
-                  <span>
-                    <h1 className={styles.overlayHeading}>
-                      Landscape Services
-                    </h1>
-                    <p className={styles.overlayContent}>
-                      Landscaping Services refer to the ongoing care and upkeep
-                      of outdoor spaces, such as residential or commercial
-                      lawns, gardens, parks. Landscaping maintenance services
-                      are important for maintaining the health and appearance of
-                      outdoor spaces, promoting the growth of plants and grass,
-                      and ensuring that outdoor areas remain safe and enjoyable.
-                      These services can be performed on a regular basis, such
-                      as weekly or monthly, or as needed based on the specific
-                      needs of the outdoor space.
-                    </p>
-                    <button className={styles.overlayButton}>Learn More</button>
-                  </span>
-                </div>
-                <Image src={image3} fluid className={styles.image} />
-              </div>
-            </Col>
-          </Row>
-        </Container>
+        <ServicesSection />
       </section>
       <section style={{ marginBottom: "5rem" }}>
         <Container>
@@ -400,10 +253,15 @@ function HomePage() {
             <Col style={{ marginTop: "2rem" }} md={6}>
               <Container>
                 <Row>
+                  <h1 style={{ fontWeight: "800" }}>
+                    The best Repair and Maintenance Company you’ll find.
+                  </h1>
+                </Row>
+                <Row>
                   <p className={`${styles.section3paragraph}`}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                    elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
-                    leo.
+                    For Fix Tech, use - We take all the repair and maintenance
+                    struggle away from you. All you have to do is rest while we
+                    do the work!
                   </p>
                 </Row>
                 <Row style={{ marginTop: "1rem" }}>
@@ -413,11 +271,11 @@ function HomePage() {
                       icon={faSquareCheck}
                     />
                     <h3 className={`${styles.section3subHeading}`}>
-                      15 Years Experience Of Business
+                      5+ Years of Business Experience
                     </h3>
-                    <p>
+                    {/* <p>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
+                    </p> */}
                   </Col>
                   <Col md={6}>
                     <FontAwesomeIcon
@@ -425,11 +283,9 @@ function HomePage() {
                       icon={faHouseCircleCheck}
                     />
                     <h3 className={`${styles.section3subHeading}`}>
-                      Have More Than 50 + Branch
+                      Operate Globally.
                     </h3>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
+                    <p>Wherever you are in the World, we can serve you. </p>
                   </Col>
                 </Row>
               </Container>
@@ -554,7 +410,7 @@ function HomePage() {
       <section style={{ marginTop: "8rem" }}>
         <Container>
           <Row>
-            <Col md={6}>
+            <Col md={5}>
               <Container>
                 <Row>
                   <h1 className={`${styles.section5locationHeading}`}>
@@ -593,8 +449,8 @@ function HomePage() {
                 </Row>
               </Container>
             </Col>
-            <Col md={6}>
-              <EnquiryForm />
+            <Col md={7}>
+              <BenifitsTable />
             </Col>
           </Row>
         </Container>
@@ -614,27 +470,53 @@ function HomePage() {
                   </Row>
                   <Row className="d-flex justify-content-center mt-4">
                     <Col xs={10}>
-                      <ol className={`${styles.section6list}`}>
-                        <li>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit.
-                        </li>
-                        <li>
-                          Nulla ac velit nec arcu sollicitudin lacinia eget eget
-                          velit.
-                        </li>
-                        <li>
-                          Praesent rutrum eros vitae libero fermentum, at
-                          feugiat nisi scelerisque.
-                        </li>
-                        <li>
-                          Etiam vel quam eget mi efficitur feugiat a eu metus.
-                        </li>
-                        <li>
-                          Mauris sed ex id felis fermentum fermentum vel ut
-                          nunc.
-                        </li>
-                      </ol>
+                      <Container>
+                        <Row
+                          className={`d-flex justify-content-center ${styles.section6list}`}
+                        >
+                          Visit www.fixtechcare.com
+                        </Row>
+                        <Row className={`d-flex justify-content-center`}>
+                          <FontAwesomeIcon icon={faArrowDown} />
+                        </Row>
+                        <Row
+                          className={`d-flex justify-content-center ${styles.section6list}`}
+                        >
+                          Go Through with the platform
+                        </Row>
+                        <Row className={`d-flex justify-content-center`}>
+                          <FontAwesomeIcon icon={faArrowDown} />
+                        </Row>
+                        <Row
+                          className={`d-flex justify-content-center ${styles.section6list}`}
+                        >
+                          Fill the Subscription Form
+                        </Row>
+                        <Row className={`d-flex justify-content-center`}>
+                          <FontAwesomeIcon icon={faArrowDown} />
+                        </Row>
+                        <Row
+                          className={`d-flex justify-content-center ${styles.section6list}`}
+                        >
+                          Pay from multiple payment option{" "}
+                        </Row>
+                        <Row className={`d-flex justify-content-center`}>
+                          <FontAwesomeIcon icon={faArrowDown} />
+                        </Row>
+                        <Row
+                          className={`d-flex justify-content-center ${styles.section6list}`}
+                        >
+                          Check mail
+                        </Row>
+                        <Row className={`d-flex justify-content-center`}>
+                          <FontAwesomeIcon icon={faArrowDown} />
+                        </Row>
+                        <Row
+                          className={`d-flex justify-content-center ${styles.section6list}`}
+                        >
+                          Your account is activated
+                        </Row>
+                      </Container>
                     </Col>
                   </Row>
                 </Container>
