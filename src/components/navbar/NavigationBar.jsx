@@ -14,6 +14,7 @@ import logoImage from "../../assets/images/logoimage.png";
 
 import styles from "./NavigationBar.module.css";
 import CustomDropdown from "../CustomDropDown/CustomDropdown";
+import CustomDropdownDownload from "../Download/CustomDropDownDownload";
 
 const NavigationBar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -69,13 +70,11 @@ const NavigationBar = () => {
               title="Dashboard Login"
               options={["Partner Login", "User Login"]}
             />
-            <div
-              className={`d-flex align-items-center px-2 ${
-                scrolled ? styles.scrolledNavItem : styles.navItem
-              }`}
-            >
-              Download
-            </div>
+            <CustomDropdownDownload
+              scrolled={scrolled}
+              title="Download"
+              options={["Partner Login", "User Login"]}
+            />
             <div
               className={`d-flex align-items-center px-2 ${
                 scrolled ? styles.scrolledNavItem : styles.navItem

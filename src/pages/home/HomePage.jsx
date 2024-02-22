@@ -6,16 +6,21 @@ import {
   faHouseCircleCheck,
   faLocationDot,
   faSquareCheck,
-  faArrowDown,
+  faGlobe,
+  faArrowLeft,
+  faArrowRight,
+  faArrowDownLong,
+  faComputer,
+  faCircleInfo,
+  faCircleCheck,
+  faEnvelope,
+  faCreditCard,
+  faUser,
+  faTruck,
+  faUserNurse,
 } from "@fortawesome/free-solid-svg-icons";
 
 import mainVideo from "../../assets/videos/main.mp4";
-import image1 from "../../assets/images/section2electrical.jpg";
-import image2 from "../../assets/images/section2plumbing.jpg";
-import image3 from "../../assets/images/section2computer.jpg";
-import image4 from "../../assets/images/section2carpenter.jpg";
-import image5 from "../../assets/images/section2cleaning.jpg";
-import image6 from "../../assets/images/section2landscaping.jpeg";
 import image7 from "../../assets/images/section3image1.jpg";
 
 import styles from "./HomePage.module.css";
@@ -26,6 +31,7 @@ import EnquiryForm from "../../components/enquiryForm/EnquiryForm";
 import TestimonialSlider from "../../components/testimonials/Testimonials";
 import ServicesSection from "../../components/servicesSection/ServicesSection";
 import BenifitsTable from "../../components/BenifitsTable/BenifitsTable";
+import FeaturesScroll from "../../components/featuresScroll/FeaturesScroll";
 
 function HomePage() {
   const welcomeTextValue = [
@@ -178,7 +184,6 @@ function HomePage() {
                         <Card.Body style={{ padding: "0px" }}>
                           <h1 className={`${styles.milestonesNumber}`}>
                             5000+
-                            {/* <Counter finalValue={5000} duration={750} />+ */}
                           </h1>
                         </Card.Body>
                         <Card.Footer
@@ -192,10 +197,7 @@ function HomePage() {
                     <Col xs={3}>
                       <Card className={`${styles.milestones}`}>
                         <Card.Body style={{ padding: "0px" }}>
-                          <h1 className={`${styles.milestonesNumber}`}>
-                            300+
-                            {/* <Counter finalValue={50} duration={750} />+ */}
-                          </h1>
+                          <h1 className={`${styles.milestonesNumber}`}>300+</h1>
                         </Card.Body>
                         <Card.Footer
                           style={{ padding: "0px" }}
@@ -226,16 +228,15 @@ function HomePage() {
                   </Row>
                 </Container>
               </Col>
-              {/* <Col style={{ marginTop: "5rem" }} md={6}>
-                <ContactForm />
-              </Col> */}
             </Row>
           </Container>
         </div>
       </section>
+
       <section style={{ marginTop: "5rem", marginBottom: "5rem" }}>
         <ServicesSection />
       </section>
+
       <section style={{ marginBottom: "5rem" }}>
         <Container>
           <Row className="d-flex text-center">
@@ -273,9 +274,6 @@ function HomePage() {
                     <h3 className={`${styles.section3subHeading}`}>
                       5+ Years of Business Experience
                     </h3>
-                    {/* <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p> */}
                   </Col>
                   <Col md={6}>
                     <FontAwesomeIcon
@@ -293,6 +291,7 @@ function HomePage() {
           </Row>
         </Container>
       </section>
+
       <section style={{ marginTop: "3rem" }}>
         <Container>
           <Row className="text-center">
@@ -407,6 +406,7 @@ function HomePage() {
           </Row>
         </Container>
       </section>
+
       <section style={{ marginTop: "8rem" }}>
         <Container>
           <Row>
@@ -455,10 +455,11 @@ function HomePage() {
           </Row>
         </Container>
       </section>
+
       <section style={{ marginTop: "4rem" }}>
         <Container>
           <Row>
-            <Col md={6} className="px-2" style={{ marginTop: "4rem" }}>
+            <Col md={12} className="px-2" style={{ marginTop: "4rem" }}>
               <div className={`${styles.section6box}`}>
                 <Container>
                   <Row className="d-flex justify-content-center">
@@ -468,61 +469,147 @@ function HomePage() {
                       </h3>
                     </Col>
                   </Row>
-                  <Row className="d-flex justify-content-center mt-4">
-                    <Col xs={10}>
-                      <Container>
-                        <Row
-                          className={`d-flex justify-content-center ${styles.section6list}`}
-                        >
-                          Visit www.fixtechcare.com
-                        </Row>
-                        <Row className={`d-flex justify-content-center`}>
-                          <FontAwesomeIcon icon={faArrowDown} />
-                        </Row>
-                        <Row
-                          className={`d-flex justify-content-center ${styles.section6list}`}
-                        >
-                          Go Through with the platform
-                        </Row>
-                        <Row className={`d-flex justify-content-center`}>
-                          <FontAwesomeIcon icon={faArrowDown} />
-                        </Row>
-                        <Row
-                          className={`d-flex justify-content-center ${styles.section6list}`}
-                        >
-                          Fill the Subscription Form
-                        </Row>
-                        <Row className={`d-flex justify-content-center`}>
-                          <FontAwesomeIcon icon={faArrowDown} />
-                        </Row>
-                        <Row
-                          className={`d-flex justify-content-center ${styles.section6list}`}
-                        >
-                          Pay from multiple payment option{" "}
-                        </Row>
-                        <Row className={`d-flex justify-content-center`}>
-                          <FontAwesomeIcon icon={faArrowDown} />
-                        </Row>
-                        <Row
-                          className={`d-flex justify-content-center ${styles.section6list}`}
-                        >
-                          Check mail
-                        </Row>
-                        <Row className={`d-flex justify-content-center`}>
-                          <FontAwesomeIcon icon={faArrowDown} />
-                        </Row>
-                        <Row
-                          className={`d-flex justify-content-center ${styles.section6list}`}
-                        >
-                          Your account is activated
-                        </Row>
-                      </Container>
-                    </Col>
+                  <Row className="mt-4">
+                    <Container>
+                      <Row className="mt-4">
+                        <Col xs={3}>
+                          <Card style={{ border: "none" }}>
+                            <Card.Title className="d-flex justify-content-center">
+                              <FontAwesomeIcon
+                                style={{ color: "#042963" }}
+                                icon={faGlobe}
+                                className={`${styles.subscriptionIcons}`}
+                              />
+                            </Card.Title>
+                            <Card.Body className="d-flex justify-content-center">
+                              <p className={`${styles.subscriptionText}`}>
+                                visit www.fixtechcare.com
+                              </p>
+                            </Card.Body>
+                          </Card>
+                        </Col>
+                        <Col className="d-flex align-items-center" xs={1}>
+                          <FontAwesomeIcon
+                            icon={faArrowRight}
+                            className={`${styles.subscriptionIcons}`}
+                          />
+                        </Col>
+                        <Col xs={4}>
+                          <Card style={{ border: "none" }}>
+                            <Card.Title className="d-flex justify-content-center">
+                              <FontAwesomeIcon
+                                icon={faComputer}
+                                className={`${styles.subscriptionIcons}`}
+                              />
+                            </Card.Title>
+                            <Card.Body className="d-flex justify-content-center">
+                              <p className={`${styles.subscriptionText}`}>
+                                Go through with the platform
+                              </p>
+                            </Card.Body>
+                          </Card>
+                        </Col>
+                        <Col className="d-flex align-items-center" xs={1}>
+                          <FontAwesomeIcon
+                            icon={faArrowRight}
+                            className={`${styles.subscriptionIcons}`}
+                          />
+                        </Col>
+                        <Col xs={3}>
+                          <Card style={{ border: "none" }}>
+                            <Card.Title className="d-flex justify-content-center">
+                              <FontAwesomeIcon
+                                style={{ color: "#f04816" }}
+                                icon={faCircleInfo}
+                                className={`${styles.subscriptionIcons}`}
+                              />
+                            </Card.Title>
+                            <Card.Body className="d-flex justify-content-center">
+                              <p className={`${styles.subscriptionText}`}>
+                                Fill the subscription form
+                              </p>
+                            </Card.Body>
+                          </Card>
+                        </Col>
+                      </Row>
+                      <Row className="mt-4">
+                        <Col xs={9}></Col>
+                        <Col className="d-flex justify-content-center" xs={3}>
+                          <FontAwesomeIcon
+                            icon={faArrowDownLong}
+                            className={`${styles.subscriptionIcons}`}
+                          />
+                        </Col>
+                      </Row>
+                      <Row className="mt-5">
+                        <Col xs={3}>
+                          <Card style={{ border: "none" }}>
+                            <Card.Title className="d-flex justify-content-center">
+                              <FontAwesomeIcon
+                                style={{ color: "#0a9603" }}
+                                icon={faCircleCheck}
+                                className={`${styles.subscriptionIcons}`}
+                              />
+                            </Card.Title>
+                            <Card.Body className="d-flex justify-content-center">
+                              <p className={`${styles.subscriptionText}`}>
+                                Your account is activated
+                              </p>
+                            </Card.Body>
+                          </Card>
+                        </Col>
+                        <Col className="d-flex align-items-center" xs={1}>
+                          <FontAwesomeIcon
+                            icon={faArrowLeft}
+                            className={`${styles.subscriptionIcons}`}
+                          />
+                        </Col>
+                        <Col xs={4}>
+                          <Card style={{ border: "none" }}>
+                            <Card.Title className="d-flex justify-content-center">
+                              <FontAwesomeIcon
+                                icon={faEnvelope}
+                                className={`${styles.subscriptionIcons}`}
+                              />
+                            </Card.Title>
+                            <Card.Body className="d-flex justify-content-center">
+                              <p className={`${styles.subscriptionText}`}>
+                                Check mail
+                              </p>
+                            </Card.Body>
+                          </Card>
+                        </Col>
+                        <Col className="d-flex align-items-center" xs={1}>
+                          <FontAwesomeIcon
+                            icon={faArrowLeft}
+                            className={`${styles.subscriptionIcons}`}
+                          />
+                        </Col>
+                        <Col xs={3}>
+                          <Card style={{ border: "none" }}>
+                            <Card.Title className="d-flex justify-content-center">
+                              <FontAwesomeIcon
+                                icon={faCreditCard}
+                                style={{ color: "#f0d330" }}
+                                className={`${styles.subscriptionIcons}`}
+                              />
+                            </Card.Title>
+                            <Card.Body className="d-flex justify-content-center">
+                              <p className={`${styles.subscriptionText}`}>
+                                Make payment
+                              </p>
+                            </Card.Body>
+                          </Card>
+                        </Col>
+                      </Row>
+                    </Container>
                   </Row>
                 </Container>
               </div>
             </Col>
-            <Col md={6} className="px-2" style={{ marginTop: "4rem" }}>
+          </Row>
+          <Row>
+            <Col md={12} className="px-2" style={{ marginTop: "4rem" }}>
               <div className={`${styles.section6box}`}>
                 <Container>
                   <Row className="d-flex justify-content-center">
@@ -532,30 +619,140 @@ function HomePage() {
                       </h3>
                     </Col>
                   </Row>
-                  <Row className="d-flex justify-content-center mt-4">
-                    <Col xs={10}>
-                      <ol className={`${styles.section6list}`}>
-                        <li>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit.
-                        </li>
-                        <li>
-                          Nulla ac velit nec arcu sollicitudin lacinia eget eget
-                          velit.
-                        </li>
-                        <li>
-                          Praesent rutrum eros vitae libero fermentum, at
-                          feugiat nisi scelerisque.
-                        </li>
-                        <li>
-                          Etiam vel quam eget mi efficitur feugiat a eu metus.
-                        </li>
-                        <li>
-                          Mauris sed ex id felis fermentum fermentum vel ut
-                          nunc.
-                        </li>
-                      </ol>
-                    </Col>
+                  <Row className="mt-4">
+                    <Container>
+                      <Row className="mt-4">
+                        <Col xs={3}>
+                          <Card style={{ border: "none" }}>
+                            <Card.Title className="d-flex justify-content-center">
+                              <FontAwesomeIcon
+                                style={{ color: "#0a9603" }}
+                                icon={faUser}
+                                className={`${styles.subscriptionIcons}`}
+                              />
+                            </Card.Title>
+                            <Card.Body className="d-flex justify-content-center">
+                              <p className={`${styles.subscriptionText}`}>
+                                Login to dashboard
+                              </p>
+                            </Card.Body>
+                          </Card>
+                        </Col>
+                        <Col className="d-flex align-items-center" xs={1}>
+                          <FontAwesomeIcon
+                            icon={faArrowRight}
+                            className={`${styles.subscriptionIcons}`}
+                          />
+                        </Col>
+                        <Col xs={4}>
+                          <Card style={{ border: "none" }}>
+                            <Card.Title className="d-flex justify-content-center">
+                              <FontAwesomeIcon
+                                icon={faComputer}
+                                className={`${styles.subscriptionIcons}`}
+                              />
+                            </Card.Title>
+                            <Card.Body className="d-flex justify-content-center">
+                              <p className={`${styles.subscriptionText}`}>
+                                Go through all features
+                              </p>
+                            </Card.Body>
+                          </Card>
+                        </Col>
+                        <Col className="d-flex align-items-center" xs={1}>
+                          <FontAwesomeIcon
+                            icon={faArrowRight}
+                            className={`${styles.subscriptionIcons}`}
+                          />
+                        </Col>
+                        <Col xs={3}>
+                          <Card style={{ border: "none" }}>
+                            <Card.Title className="d-flex justify-content-center">
+                              <FontAwesomeIcon
+                                style={{ color: "#d69004" }}
+                                icon={faTruck}
+                                className={`${styles.subscriptionIcons}`}
+                              />
+                            </Card.Title>
+                            <Card.Body className="d-flex justify-content-center">
+                              <p className={`${styles.subscriptionText}`}>
+                                Service request
+                              </p>
+                            </Card.Body>
+                          </Card>
+                        </Col>
+                      </Row>
+                      <Row className="mt-4">
+                        <Col xs={9}></Col>
+                        <Col className="d-flex justify-content-center" xs={3}>
+                          <FontAwesomeIcon
+                            icon={faArrowDownLong}
+                            className={`${styles.subscriptionIcons}`}
+                          />
+                        </Col>
+                      </Row>
+                      <Row className="mt-5">
+                        <Col xs={3}>
+                          <Card style={{ border: "none" }}>
+                            <Card.Title className="d-flex justify-content-center">
+                              <FontAwesomeIcon
+                                style={{ color: "#0a9603" }}
+                                icon={faCircleCheck}
+                                className={`${styles.subscriptionIcons}`}
+                              />
+                            </Card.Title>
+                            <Card.Body className="d-flex justify-content-center">
+                              <p className={`${styles.subscriptionText}`}>
+                                Submit feedback form
+                              </p>
+                            </Card.Body>
+                          </Card>
+                        </Col>
+                        <Col className="d-flex align-items-center" xs={1}>
+                          <FontAwesomeIcon
+                            icon={faArrowLeft}
+                            className={`${styles.subscriptionIcons}`}
+                          />
+                        </Col>
+                        <Col xs={4}>
+                          <Card style={{ border: "none" }}>
+                            <Card.Title className="d-flex justify-content-center">
+                              <FontAwesomeIcon
+                                icon={faUserNurse}
+                                className={`${styles.subscriptionIcons}`}
+                              />
+                            </Card.Title>
+                            <Card.Body className="d-flex justify-content-center">
+                              <p className={`${styles.subscriptionText}`}>
+                                Technician will complete the task{" "}
+                              </p>
+                            </Card.Body>
+                          </Card>
+                        </Col>
+                        <Col className="d-flex align-items-center" xs={1}>
+                          <FontAwesomeIcon
+                            icon={faArrowLeft}
+                            className={`${styles.subscriptionIcons}`}
+                          />
+                        </Col>
+                        <Col xs={3}>
+                          <Card style={{ border: "none" }}>
+                            <Card.Title className="d-flex justify-content-center">
+                              <FontAwesomeIcon
+                                icon={faLocationDot}
+                                style={{ color: "#f0d330" }}
+                                className={`${styles.subscriptionIcons}`}
+                              />
+                            </Card.Title>
+                            <Card.Body className="d-flex justify-content-center">
+                              <p className={`${styles.subscriptionText}`}>
+                                Track engineer live
+                              </p>
+                            </Card.Body>
+                          </Card>
+                        </Col>
+                      </Row>
+                    </Container>
                   </Row>
                 </Container>
               </div>
@@ -563,6 +760,27 @@ function HomePage() {
           </Row>
         </Container>
       </section>
+
+      <section style={{ marginTop: "8rem" }}>
+        <Container>
+          <Row>
+            <Col md={12}>
+              <div
+                style={{ marginBottom: "5rem" }}
+                className="col-md-12 d-flex justify-content-center align-items-center"
+              >
+                <h1 style={{ fontWeight: "800" }}>Features</h1>
+              </div>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={12}>
+              <FeaturesScroll />
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
       <section style={{ marginTop: "7rem", marginBottom: "5rem" }}>
         <Container>
           <Row>

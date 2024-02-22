@@ -198,7 +198,16 @@
   color: #02abb6;
 }
 
-/* section 6  */
+/* section 6 subscription  */
+
+.subscriptionIcons {
+  font-size: 2rem;
+  color: #02abb6;
+}
+
+.subscriptionText{
+  font-weight: 800;
+}
 
 .section6box {
   border: 1px solid lightgray;
@@ -213,7 +222,7 @@
   font-weight: 800;
 }
 
-.section6list{
+.section6list {
   line-height: 1.9;
   font-weight: 500;
 }

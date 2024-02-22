@@ -1,0 +1,23 @@
+.footerComponent {
+  background-color: #03011c;
+  color: white;
+}
+
+.footerRows {
+  margin-top: 1rem;
+}
+
+.footerHeading{
+    transition: transform 0.3s;
+}
+
+.footerHeading:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}
+
+.copyrightcon {
+  color: white;
+  background-color: transparent;
+  margin-right: 0.2rem;
+}
