@@ -2,6 +2,8 @@ import React, { Fragment, useEffect, useState } from "react";
 import { Row, Col, Container } from "react-bootstrap";
 import styles from "./FeaturesScroll.module.css";
 
+import { useInView } from "react-intersection-observer";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { useMediaQuery } from "react-responsive";
@@ -36,6 +38,54 @@ const featuresArray = [
 ];
 
 const FeaturesScroll = () => {
+  const [ref1, inView1] = useInView({
+    threshold: 0.3,
+  });
+
+  const [ref2, inView2] = useInView({
+    threshold: 0.5,
+  });
+
+  const [ref3, inView3] = useInView({
+    threshold: 0.5,
+  });
+
+  const [ref4, inView4] = useInView({
+    threshold: 0.5,
+  });
+
+  const [ref5, inView5] = useInView({
+    threshold: 0.5,
+  });
+
+  const [ref6, inView6] = useInView({
+    threshold: 0.5,
+  });
+
+  const [ref7, inView7] = useInView({
+    threshold: 0.5,
+  });
+
+  const [ref8, inView8] = useInView({
+    threshold: 0.5,
+  });
+
+  const [ref9, inView9] = useInView({
+    threshold: 0.5,
+  });
+
+  const [ref10, inView10] = useInView({
+    threshold: 0.5,
+  });
+
+  const [ref11, inView11] = useInView({
+    threshold: 0.5,
+  });
+
+  const [ref12, inView12] = useInView({
+    threshold: 0.5,
+  });
+
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const isLargeScreen = useMediaQuery({ minWidth: 860 });
@@ -74,10 +124,15 @@ const FeaturesScroll = () => {
         <Col className="px-0" style={{ height: "100%" }} md={2} xs={0}>
           <div className={`${styles.verticalIconContainer}`}>
             <div
-              className={`d-flex align-items-center justify-content-center ${styles.verticalIconCircle}`}
+              className={`d-flex align-items-center justify-content-center ${
+                styles.verticalIconCircle
+              } ${inView1 ? "animate__animated animate__bounceIn" : ""}`}
             >
               <FontAwesomeIcon
-                className={`${styles.verticalIcons}`}
+                ref={ref1}
+                className={`${styles.verticalIcons} ${
+                  inView1 ? "animate__animated animate__bounceIn" : ""
+                }`}
                 icon={faBell}
               />
             </div>
@@ -97,10 +152,15 @@ const FeaturesScroll = () => {
         <Col style={{ height: "100%" }} md={2} xs={0}>
           <div className={`${styles.verticalIconContainer}`}>
             <div
-              className={`d-flex align-items-center justify-content-center ${styles.verticalIconCircle}`}
+              className={`d-flex align-items-center justify-content-center ${
+                styles.verticalIconCircle
+              } ${inView2 ? "animate__animated animate__bounceIn" : ""}`}
             >
               <FontAwesomeIcon
-                className={`${styles.verticalIcons}`}
+                ref={ref2}
+                className={`${styles.verticalIcons} ${
+                  inView2 ? "animate__animated animate__bounceIn" : ""
+                }`}
                 icon={faLocationCrosshairs}
               />
             </div>
@@ -142,10 +202,15 @@ const FeaturesScroll = () => {
         <Col style={{ height: "100%" }} md={2} xs={0}>
           <div className={`${styles.verticalIconContainer}`}>
             <div
-              className={`d-flex align-items-center justify-content-center ${styles.verticalIconCircle}`}
+              className={`d-flex align-items-center justify-content-center ${
+                styles.verticalIconCircle
+              } ${inView3 ? "animate__animated animate__bounceIn" : ""}`}
             >
               <FontAwesomeIcon
-                className={`${styles.verticalIcons}`}
+                ref={ref3}
+                className={`${styles.verticalIcons} ${
+                  inView3 ? "animate__animated animate__bounceIn" : ""
+                }`}
                 icon={faTruckFast}
               />
             </div>
@@ -165,10 +230,15 @@ const FeaturesScroll = () => {
         <Col style={{ height: "100%" }} md={2} xs={0}>
           <div className={`${styles.verticalIconContainer}`}>
             <div
-              className={`d-flex align-items-center justify-content-center ${styles.verticalIconCircle}`}
+              className={`d-flex align-items-center justify-content-center ${
+                styles.verticalIconCircle
+              } ${inView4 ? "animate__animated animate__bounceIn" : ""}`}
             >
               <FontAwesomeIcon
-                className={`${styles.verticalIcons}`}
+                ref={ref4}
+                className={`${styles.verticalIcons} ${
+                  inView4 ? "animate__animated animate__bounceIn" : ""
+                }`}
                 icon={faChartLine}
               />
             </div>
@@ -210,10 +280,15 @@ const FeaturesScroll = () => {
         <Col style={{ height: "100%" }} md={2} xs={0}>
           <div className={`${styles.verticalIconContainer}`}>
             <div
-              className={`d-flex align-items-center justify-content-center ${styles.verticalIconCircle}`}
+              className={`d-flex align-items-center justify-content-center ${
+                styles.verticalIconCircle
+              } ${inView5 ? "animate__animated animate__bounceIn" : ""}`}
             >
               <FontAwesomeIcon
-                className={`${styles.verticalIcons}`}
+                ref={ref5}
+                className={`${styles.verticalIcons} ${
+                  inView5 ? "animate__animated animate__bounceIn" : ""
+                }`}
                 icon={faStopwatch20}
               />
             </div>
@@ -233,10 +308,15 @@ const FeaturesScroll = () => {
         <Col style={{ height: "100%" }} md={2} xs={0}>
           <div className={`${styles.verticalIconContainer}`}>
             <div
-              className={`d-flex align-items-center justify-content-center ${styles.verticalIconCircle}`}
+              className={`d-flex align-items-center justify-content-center ${
+                styles.verticalIconCircle
+              } ${inView6 ? "animate__animated animate__bounceIn" : ""}`}
             >
               <FontAwesomeIcon
-                className={`${styles.verticalIcons}`}
+                ref={ref6}
+                className={`${styles.verticalIcons} ${
+                  inView6 ? "animate__animated animate__bounceIn" : ""
+                }`}
                 icon={faBox}
               />
             </div>
@@ -278,10 +358,15 @@ const FeaturesScroll = () => {
         <Col style={{ height: "100%" }} md={2} xs={0}>
           <div className={`${styles.verticalIconContainer}`}>
             <div
-              className={`d-flex align-items-center justify-content-center ${styles.verticalIconCircle}`}
+              className={`d-flex align-items-center justify-content-center ${
+                styles.verticalIconCircle
+              } ${inView7 ? "animate__animated animate__bounceIn" : ""}`}
             >
               <FontAwesomeIcon
-                className={`${styles.verticalIcons}`}
+                ref={ref7}
+                className={`${styles.verticalIcons} ${
+                  inView7 ? "animate__animated animate__bounceIn" : ""
+                }`}
                 icon={faList}
               />
             </div>
@@ -301,10 +386,15 @@ const FeaturesScroll = () => {
         <Col style={{ height: "100%" }} md={2} xs={0}>
           <div className={`${styles.verticalIconContainer}`}>
             <div
-              className={`d-flex align-items-center justify-content-center ${styles.verticalIconCircle}`}
+              className={`d-flex align-items-center justify-content-center ${
+                styles.verticalIconCircle
+              } ${inView8 ? "animate__animated animate__bounceIn" : ""}`}
             >
               <FontAwesomeIcon
-                className={`${styles.verticalIcons}`}
+                ref={ref8}
+                className={`${styles.verticalIcons} ${
+                  inView8 ? "animate__animated animate__bounceIn" : ""
+                }`}
                 icon={faClockRotateLeft}
               />
             </div>
@@ -346,10 +436,15 @@ const FeaturesScroll = () => {
         <Col style={{ height: "100%" }} md={2} xs={0}>
           <div className={`${styles.verticalIconContainer}`}>
             <div
-              className={`d-flex align-items-center justify-content-center ${styles.verticalIconCircle}`}
+              className={`d-flex align-items-center justify-content-center ${
+                styles.verticalIconCircle
+              } ${inView9 ? "animate__animated animate__bounceIn" : ""}`}
             >
               <FontAwesomeIcon
-                className={`${styles.verticalIcons}`}
+                ref={ref9}
+                className={`${styles.verticalIcons} ${
+                  inView9 ? "animate__animated animate__bounceIn" : ""
+                }`}
                 icon={faHammer}
               />
             </div>
@@ -369,10 +464,15 @@ const FeaturesScroll = () => {
         <Col style={{ height: "100%" }} md={2} xs={0}>
           <div className={`${styles.verticalIconContainer}`}>
             <div
-              className={`d-flex align-items-center justify-content-center ${styles.verticalIconCircle}`}
+              className={`d-flex align-items-center justify-content-center ${
+                styles.verticalIconCircle
+              } ${inView10 ? "animate__animated animate__bounceIn" : ""}`}
             >
               <FontAwesomeIcon
-                className={`${styles.verticalIcons}`}
+                ref={ref10}
+                className={`${styles.verticalIcons} ${
+                  inView10 ? "animate__animated animate__bounceIn" : ""
+                }`}
                 icon={faTicket}
               />
             </div>
@@ -414,10 +514,15 @@ const FeaturesScroll = () => {
         <Col style={{ height: "100%" }} md={2} xs={0}>
           <div className={`${styles.verticalIconContainer}`}>
             <div
-              className={`d-flex align-items-center justify-content-center ${styles.verticalIconCircle}`}
+              className={`d-flex align-items-center justify-content-center ${
+                styles.verticalIconCircle
+              } ${inView11 ? "animate__animated animate__bounceIn" : ""}`}
             >
               <FontAwesomeIcon
-                className={`${styles.verticalIcons}`}
+                ref={ref11}
+                className={`${styles.verticalIcons} ${
+                  inView11 ? "animate__animated animate__bounceIn" : ""
+                }`}
                 icon={faBoxesStacked}
               />
             </div>
@@ -437,10 +542,15 @@ const FeaturesScroll = () => {
         <Col style={{ height: "100%" }} md={2} xs={0}>
           <div className={`${styles.verticalIconContainer}`}>
             <div
-              className={`d-flex align-items-center justify-content-center ${styles.verticalIconCircle}`}
+              className={`d-flex align-items-center justify-content-center ${
+                styles.verticalIconCircle
+              } ${inView12 ? "animate__animated animate__bounceIn" : ""}`}
             >
               <FontAwesomeIcon
-                className={`${styles.verticalIcons}`}
+                ref={ref12}
+                className={`${styles.verticalIcons} ${
+                  inView12 ? "animate__animated animate__bounceIn" : ""
+                }`}
                 icon={faHelmetSafety}
               />
             </div>
