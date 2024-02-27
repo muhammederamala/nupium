@@ -459,7 +459,7 @@ function HomePage() {
       <section style={{ marginTop: "4rem" }}>
         <Container>
           <Row>
-            <Col md={12} className="px-2" style={{ marginTop: "4rem" }}>
+            <Col md={6} className="px-2" style={{ marginTop: "4rem" }}>
               <div className={`${styles.section6box}`}>
                 <Container>
                   <Row className="d-flex justify-content-center">
@@ -481,9 +481,9 @@ function HomePage() {
                                 className={`${styles.subscriptionIcons}`}
                               />
                             </Card.Title>
-                            <Card.Body className="d-flex justify-content-center">
+                            <Card.Body className="d-flex justify-content-center text-center">
                               <p className={`${styles.subscriptionText}`}>
-                                visit www.fixtechcare.com
+                                visit fixtechcare.com
                               </p>
                             </Card.Body>
                           </Card>
@@ -502,7 +502,7 @@ function HomePage() {
                                 className={`${styles.subscriptionIcons}`}
                               />
                             </Card.Title>
-                            <Card.Body className="d-flex justify-content-center">
+                            <Card.Body className="d-flex justify-content-center text-center">
                               <p className={`${styles.subscriptionText}`}>
                                 Go through with the platform
                               </p>
@@ -524,7 +524,7 @@ function HomePage() {
                                 className={`${styles.subscriptionIcons}`}
                               />
                             </Card.Title>
-                            <Card.Body className="d-flex justify-content-center">
+                            <Card.Body className="d-flex justify-content-center text-center">
                               <p className={`${styles.subscriptionText}`}>
                                 Fill the subscription form
                               </p>
@@ -551,7 +551,7 @@ function HomePage() {
                                 className={`${styles.subscriptionIcons}`}
                               />
                             </Card.Title>
-                            <Card.Body className="d-flex justify-content-center">
+                            <Card.Body className="d-flex justify-content-center text-center">
                               <p className={`${styles.subscriptionText}`}>
                                 Your account is activated
                               </p>
@@ -572,7 +572,7 @@ function HomePage() {
                                 className={`${styles.subscriptionIcons}`}
                               />
                             </Card.Title>
-                            <Card.Body className="d-flex justify-content-center">
+                            <Card.Body className="d-flex justify-content-center text-center">
                               <p className={`${styles.subscriptionText}`}>
                                 Check mail
                               </p>
@@ -594,7 +594,7 @@ function HomePage() {
                                 className={`${styles.subscriptionIcons}`}
                               />
                             </Card.Title>
-                            <Card.Body className="d-flex justify-content-center">
+                            <Card.Body className="d-flex justify-content-center text-center">
                               <p className={`${styles.subscriptionText}`}>
                                 Make payment
                               </p>
@@ -607,9 +607,7 @@ function HomePage() {
                 </Container>
               </div>
             </Col>
-          </Row>
-          <Row>
-            <Col md={12} className="px-2" style={{ marginTop: "4rem" }}>
+            <Col md={6} className="px-2" style={{ marginTop: "4rem" }}>
               <div className={`${styles.section6box}`}>
                 <Container>
                   <Row className="d-flex justify-content-center">
@@ -631,7 +629,7 @@ function HomePage() {
                                 className={`${styles.subscriptionIcons}`}
                               />
                             </Card.Title>
-                            <Card.Body className="d-flex justify-content-center">
+                            <Card.Body className="d-flex justify-content-center text-center">
                               <p className={`${styles.subscriptionText}`}>
                                 Login to dashboard
                               </p>
@@ -652,7 +650,7 @@ function HomePage() {
                                 className={`${styles.subscriptionIcons}`}
                               />
                             </Card.Title>
-                            <Card.Body className="d-flex justify-content-center">
+                            <Card.Body className="d-flex justify-content-center text-center">
                               <p className={`${styles.subscriptionText}`}>
                                 Go through all features
                               </p>
@@ -674,7 +672,7 @@ function HomePage() {
                                 className={`${styles.subscriptionIcons}`}
                               />
                             </Card.Title>
-                            <Card.Body className="d-flex justify-content-center">
+                            <Card.Body className="d-flex justify-content-center text-center">
                               <p className={`${styles.subscriptionText}`}>
                                 Service request
                               </p>
@@ -701,7 +699,7 @@ function HomePage() {
                                 className={`${styles.subscriptionIcons}`}
                               />
                             </Card.Title>
-                            <Card.Body className="d-flex justify-content-center">
+                            <Card.Body className="d-flex justify-content-center text-center">
                               <p className={`${styles.subscriptionText}`}>
                                 Submit feedback form
                               </p>
@@ -722,7 +720,7 @@ function HomePage() {
                                 className={`${styles.subscriptionIcons}`}
                               />
                             </Card.Title>
-                            <Card.Body className="d-flex justify-content-center">
+                            <Card.Body className="d-flex justify-content-center text-center">
                               <p className={`${styles.subscriptionText}`}>
                                 Technician will complete the task{" "}
                               </p>
@@ -744,7 +742,7 @@ function HomePage() {
                                 className={`${styles.subscriptionIcons}`}
                               />
                             </Card.Title>
-                            <Card.Body className="d-flex justify-content-center">
+                            <Card.Body className="d-flex justify-content-center text-center">
                               <p className={`${styles.subscriptionText}`}>
                                 Track engineer live
                               </p>
@@ -758,6 +756,7 @@ function HomePage() {
               </div>
             </Col>
           </Row>
+          <Row></Row>
         </Container>
       </section>
 
