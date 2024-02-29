@@ -9,6 +9,7 @@ import Layout from "./Layout/Layout";
 
 import DeleteSubjectModal from "./modal/Services/ServicesModal";
 import CareerModal from "./modal/Career/CareerModal";
+import ApplicationSubmittedModal from "./modal/Career/ApplicationSubmittedModal";
 
 function App() {
   const router = createBrowserRouter(
@@ -23,6 +24,7 @@ function App() {
     <div>
       <DeleteSubjectModal />
       <CareerModal />
+      <ApplicationSubmittedModal />
       <RouterProvider router={router} />
     </div>
   );

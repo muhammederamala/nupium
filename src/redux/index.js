@@ -4,6 +4,7 @@ const initialModalState = {
   servicesModal: false,
   serviceId: "",
   careerModal: false,
+  careerApplicationSubmittedModal: false,
 };
 
 const modalSlice = createSlice({
@@ -22,6 +23,13 @@ const modalSlice = createSlice({
     },
     hideCareerModal(state) {
       state.careerModal = false;
+    },
+    showCareerApplicationSubmittedModal(state) {
+      state.careerModal = false;
+      state.careerApplicationSubmittedModal = true;
+    },
+    hideCareerApplicationSubmittedModal(state) {
+      state.careerApplicationSubmittedModal = false;
     },
   },
 });

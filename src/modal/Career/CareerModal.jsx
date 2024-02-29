@@ -19,6 +19,10 @@ function CareerModal() {
     dispatch(modalActions.hideCareerModal());
   };
 
+  const OnSubmitHandler = () => {
+    dispatch(modalActions.showCareerApplicationSubmittedModal());
+  };
+
   return (
     <ModalPortal>
       <Modal show={showModal} onHide={onHideHandler} size="lg">
@@ -52,7 +56,7 @@ function CareerModal() {
             <Button variant="secondary" onClick={onHideHandler}>
               Cancel
             </Button>
-            <Button variant="success" onClick={onHideHandler}>
+            <Button variant="success" onClick={OnSubmitHandler}>
               Submit
             </Button>
           </Modal.Footer>
