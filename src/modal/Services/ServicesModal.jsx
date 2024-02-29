@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 import ModalPortal from "../ModalPortal";
-import axios from "axios";
 // import { useNavigate } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";

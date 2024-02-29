@@ -1,0 +1,27 @@
+.languageIcon {
+  transition: transform 0.2s;
+}
+
+.languageIcon:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+}
+
+.languageDropDown {
+  display: none;
+  position: absolute;
+  top: 65%;
+  border-radius: 5%;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.languageIconContainer:hover .languageDropDown {
+  display: block;
+}
+
+.languageDropDown:hover{
+    display: block;
+}

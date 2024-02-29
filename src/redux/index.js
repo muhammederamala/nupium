@@ -3,6 +3,7 @@ import { createSlice, configureStore } from "@reduxjs/toolkit";
 const initialModalState = {
   servicesModal: false,
   serviceId: "",
+  careerModal: false,
 };
 
 const modalSlice = createSlice({
@@ -15,6 +16,12 @@ const modalSlice = createSlice({
     },
     hideServicesModal(state) {
       state.servicesModal = false;
+    },
+    showCareerModal(state) {
+      state.careerModal = true;
+    },
+    hideCareerModal(state) {
+      state.careerModal = false;
     },
   },
 });

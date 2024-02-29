@@ -1,6 +1,9 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
+import { UseDispatch, useDispatch } from "react-redux";
+import { modalActions } from "../../redux";
+
 import styles from "./FooterComponent.module.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,6 +12,12 @@ import logoImage from "../../assets/images/logoimage.png";
 import { faCopyright } from "@fortawesome/free-regular-svg-icons";
 
 function FooterComponent() {
+  const dispatch = useDispatch();
+
+  const CareerClickHandler = () => {
+    dispatch(modalActions.showCareerModal());
+  };
+  
   return (
     <footer className={`footer ${styles.footerComponent}`}>
       <Container className="py-5">
@@ -46,7 +55,7 @@ function FooterComponent() {
               </Row>
               <Row className={`${styles.footerRows}`}>
                 <Col md={12}>
-                  <h6 className={styles.footerHeading}>Career</h6>
+                  <h6 className={styles.footerHeading} onClick={CareerClickHandler}>Career</h6>
                 </Col>
               </Row>
               <Row className={`${styles.footerRows}`}>

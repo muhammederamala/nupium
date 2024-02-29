@@ -15,6 +15,7 @@ import logoImage from "../../assets/images/logoimage.png";
 import styles from "./NavigationBar.module.css";
 import CustomDropdown from "../CustomDropDown/CustomDropdown";
 import CustomDropdownDownload from "../Download/CustomDropDownDownload";
+import LanguageSelector from "../LanguageSelector/LanguageSelector";
 
 const NavigationBar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -84,6 +85,7 @@ const NavigationBar = () => {
             </div>
           </Nav>
           <div>
+            {/* <p>Lang</p> */}
             <FontAwesomeIcon
               className={`mx-2 ${styles.socialMediaIcons}`}
               icon={faInstagram}
@@ -100,6 +102,7 @@ const NavigationBar = () => {
               className={`mx-2 ${styles.socialMediaIcons}`}
               icon={faFacebook}
             />
+            <LanguageSelector />
           </div>
         </Navbar.Collapse>
       </Container>
