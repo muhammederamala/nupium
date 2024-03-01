@@ -12,6 +12,8 @@ import CareerModal from "./modal/Career/CareerModal";
 import ApplicationSubmittedModal from "./modal/Career/ApplicationSubmittedModal";
 import CompanyModal from "./modal/Company/CompanyModal";
 import ContactUsModal from "./modal/ContactUs/ContactusModal";
+import Sales from "./modal/Sales/Sales";
+import PackagesModal from "./modal/packages/PackagesModal";
 
 function App() {
   const router = createBrowserRouter(
@@ -29,6 +31,8 @@ function App() {
       <ApplicationSubmittedModal />
       <CompanyModal />
       <ContactUsModal />
+      <Sales />
+      <PackagesModal />
       <RouterProvider router={router} />
     </div>
   );

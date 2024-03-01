@@ -26,6 +26,14 @@ function FooterComponent() {
     dispatch(modalActions.showContactUsModal());
   };
 
+  const SalesClickHandler = () => {
+    dispatch(modalActions.showSalesModal());
+  };
+
+  const handlePackagesGlobally = () => {
+    dispatch(modalActions.showPackagesModal());
+  };
+
   return (
     <footer className={`footer ${styles.footerComponent}`}>
       <Container className="py-5">
@@ -49,7 +57,12 @@ function FooterComponent() {
               </Row>
               <Row className={`${styles.footerRows}`}>
                 <Col md={12}>
-                  <h6 className={styles.footerHeading}>Sales Contact</h6>
+                  <h6
+                    className={styles.footerHeading}
+                    onClick={SalesClickHandler}
+                  >
+                    Sales Contact
+                  </h6>
                 </Col>
               </Row>
               <Row className={`${styles.footerRows}`}>
@@ -88,7 +101,12 @@ function FooterComponent() {
               </Row>
               <Row className={`${styles.footerRows}`}>
                 <Col md={12}>
-                  <h6 className={styles.footerHeading}>Packages Globally</h6>
+                  <h6
+                    className={styles.footerHeading}
+                    onClick={handlePackagesGlobally}
+                  >
+                    Packages Globally
+                  </h6>
                 </Col>
               </Row>
             </Container>

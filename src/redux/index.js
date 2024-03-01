@@ -7,6 +7,8 @@ const initialModalState = {
   careerApplicationSubmittedModal: false,
   companyModal: false,
   contactUsModal: false,
+  salesModal: false,
+  packagesModal: false,
 };
 
 const modalSlice = createSlice({
@@ -51,6 +53,22 @@ const modalSlice = createSlice({
     },
     hideContactUsModal(state) {
       state.contactUsModal = false;
+    },
+
+    // sales
+    showSalesModal(state) {
+      state.salesModal = true;
+    },
+    hideSalesModal(state) {
+      state.salesModal = false;
+    },
+
+    // packages
+    showPackagesModal(state) {
+      state.packagesModal = true;
+    },
+    hidePackagesModal(state) {
+      state.packagesModal = false;
     },
   },
 });
