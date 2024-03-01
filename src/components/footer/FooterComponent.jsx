@@ -17,7 +17,15 @@ function FooterComponent() {
   const CareerClickHandler = () => {
     dispatch(modalActions.showCareerModal());
   };
-  
+
+  const CompanyClickHandler = () => {
+    dispatch(modalActions.showCompanyModal());
+  };
+
+  const ContactUsClickHandler = () => {
+    dispatch(modalActions.showContactUsModal());
+  };
+
   return (
     <footer className={`footer ${styles.footerComponent}`}>
       <Container className="py-5">
@@ -26,7 +34,12 @@ function FooterComponent() {
             <Container>
               <Row className={`${styles.footerRows}`}>
                 <Col md={12}>
-                  <h6 className={styles.footerHeading}>Company</h6>
+                  <h6
+                    className={styles.footerHeading}
+                    onClick={CompanyClickHandler}
+                  >
+                    Company
+                  </h6>
                 </Col>
               </Row>
               <Row className={`${styles.footerRows}`}>
@@ -41,7 +54,12 @@ function FooterComponent() {
               </Row>
               <Row className={`${styles.footerRows}`}>
                 <Col md={12}>
-                  <h6 className={styles.footerHeading}>Contact Us</h6>
+                  <h6
+                    className={styles.footerHeading}
+                    onClick={ContactUsClickHandler}
+                  >
+                    Contact Us
+                  </h6>
                 </Col>
               </Row>
             </Container>
@@ -55,7 +73,12 @@ function FooterComponent() {
               </Row>
               <Row className={`${styles.footerRows}`}>
                 <Col md={12}>
-                  <h6 className={styles.footerHeading} onClick={CareerClickHandler}>Career</h6>
+                  <h6
+                    className={styles.footerHeading}
+                    onClick={CareerClickHandler}
+                  >
+                    Career
+                  </h6>
                 </Col>
               </Row>
               <Row className={`${styles.footerRows}`}>

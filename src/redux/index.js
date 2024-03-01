@@ -5,12 +5,15 @@ const initialModalState = {
   serviceId: "",
   careerModal: false,
   careerApplicationSubmittedModal: false,
+  companyModal: false,
+  contactUsModal: false,
 };
 
 const modalSlice = createSlice({
   name: "modal",
   initialState: initialModalState,
   reducers: {
+    //services
     showServicesModal(state, action) {
       state.servicesModal = true;
       state.serviceId = action.payload.serviceId;
@@ -18,6 +21,8 @@ const modalSlice = createSlice({
     hideServicesModal(state) {
       state.servicesModal = false;
     },
+
+    //career
     showCareerModal(state) {
       state.careerModal = true;
     },
@@ -30,6 +35,22 @@ const modalSlice = createSlice({
     },
     hideCareerApplicationSubmittedModal(state) {
       state.careerApplicationSubmittedModal = false;
+    },
+
+    //company
+    showCompanyModal(state) {
+      state.companyModal = true;
+    },
+    hideCompanyModal(state) {
+      state.companyModal = false;
+    },
+
+    // contact us
+    showContactUsModal(state) {
+      state.contactUsModal = true;
+    },
+    hideContactUsModal(state) {
+      state.contactUsModal = false;
     },
   },
 });
