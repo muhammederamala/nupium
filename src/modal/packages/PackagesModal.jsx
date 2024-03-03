@@ -17,11 +17,11 @@ function PackagesModal() {
     <ModalPortal>
       <Modal show={showModal} onHide={onHideHandler} size="lg">
         <div className={styles["table-container"]}>
-          <Modal.Header closeButton>
-            <Modal.Title>All solutions package.</Modal.Title>
-          </Modal.Header>
+          <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
-            <table className={styles.table}> {/* Apply CSS class */}
+            <h4>Enterprise Model</h4>
+            <h6 className="mt-4">All solutions package</h6>
+            <table className={`${styles.table} mt-3`}>
               <thead>
                 <tr>
                   <th>Country</th>
@@ -89,6 +89,385 @@ function PackagesModal() {
                   <td>United States</td>
                   <td>US$ 45000</td>
                   <td>US$ 90000</td>
+                </tr>
+              </tbody>
+            </table>
+            <h6 className="mt-5">As per services package</h6>
+            <table className={`${styles.table} mt-4`}>
+              <thead>
+                <tr>
+                  <th>Country</th>
+                  <th>Type of Services</th>
+                  <th>Monthly Fee</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Asia region</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td rowSpan="6">India</td>
+                  <td>Electrical & Electronics Maintenance</td>
+                  <td>INR 50000</td>
+                </tr>
+                <tr>
+                  <td>Plumbing Maintenance</td>
+                  <td>INR 50000</td>
+                </tr>
+                <tr>
+                  <td>Computer System Maintenance</td>
+                  <td>INR 70000</td>
+                </tr>
+                <tr>
+                  <td>Carpenter Services</td>
+                  <td>INR 50000</td>
+                </tr>
+                <tr>
+                  <td>Cleaning Solutions</td>
+                  <td>INR 60000</td>
+                </tr>
+                <tr>
+                  <td>Landscaping Services</td>
+                  <td>INR 60000</td>
+                </tr>
+                <tr>
+                  <td rowSpan="6">Thailand</td>
+                  <td>Electrical & Electronics Maintenance</td>
+                  <td>Thai B. 100000</td>
+                </tr>
+                <tr>
+                  <td>Plumbing Maintenance</td>
+                  <td>Thai B. 100000</td>
+                </tr>
+                <tr>
+                  <td>Computer System Maintenance</td>
+                  <td>Thai B. 115000</td>
+                </tr>
+                <tr>
+                  <td>Carpenter Services</td>
+                  <td>Thai B. 100000</td>
+                </tr>
+                <tr>
+                  <td>Cleaning Solutions</td>
+                  <td>Thai B. 85000</td>
+                </tr>
+                <tr>
+                  <td>Landscaping Services</td>
+                  <td>Thai B. 85000</td>
+                </tr>
+                <tr>
+                  <td rowSpan="6">Singapore</td>
+                  <td>Electrical & Electronics Maintenance</td>
+                  <td>SGD$ 5000</td>
+                </tr>
+                <tr>
+                  <td>Plumbing Maintenance</td>
+                  <td>SGD$ 5000</td>
+                </tr>
+                <tr>
+                  <td>Computer System Maintenance</td>
+                  <td>SGD$ 6500</td>
+                </tr>
+                <tr>
+                  <td>Carpenter Services</td>
+                  <td>SGD$ 5000</td>
+                </tr>
+                <tr>
+                  <td>Cleaning Solutions</td>
+                  <td>SGD$ 5500</td>
+                </tr>
+                <tr>
+                  <td>Landscaping Services</td>
+                  <td>SGD$ 5500</td>
+                </tr>
+                <tr>
+                  <td rowSpan="6">Hong Kong</td>
+                  <td>Electrical & Electronics Maintenance</td>
+                  <td>HK$ 70000</td>
+                </tr>
+                <tr>
+                  <td>Plumbing Maintenance</td>
+                  <td>HK$ 70000</td>
+                </tr>
+                <tr>
+                  <td>Computer System Maintenance</td>
+                  <td>HK$ 90000</td>
+                </tr>
+                <tr>
+                  <td>Carpenter Services</td>
+                  <td>HK$ 70000</td>
+                </tr>
+                <tr>
+                  <td>Cleaning Solutions</td>
+                  <td>HK$ 60000</td>
+                </tr>
+                <tr>
+                  <td>Landscaping Services</td>
+                  <td>HK$ 60000</td>
+                </tr>
+                <tr>
+                  <td rowSpan="6">UAE</td>
+                  <td>Electrical & Electronics Maintenance</td>
+                  <td>Dirham 6500</td>
+                </tr>
+                <tr>
+                  <td>Plumbing Maintenance</td>
+                  <td>Dirham 6500</td>
+                </tr>
+                <tr>
+                  <td>Computer System Maintenance</td>
+                  <td>Dirham 8500</td>
+                </tr>
+                <tr>
+                  <td>Carpenter Services</td>
+                  <td>Dirham 6500</td>
+                </tr>
+                <tr>
+                  <td>Cleaning Solutions</td>
+                  <td>Dirham 7500</td>
+                </tr>
+                <tr>
+                  <td>Landscaping Services</td>
+                  <td>Dirham 7500</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Europe Region</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td rowSpan="6">Europe Union Nations</td>
+                  <td>Electrical & Electronics Maintenance</td>
+                  <td>Euro 5400</td>
+                </tr>
+                <tr>
+                  <td>Plumbing Maintenance</td>
+                  <td>Euro 5400</td>
+                </tr>
+                <tr>
+                  <td>Computer System Maintenance</td>
+                  <td>Euro 6900</td>
+                </tr>
+                <tr>
+                  <td>Carpenter Services</td>
+                  <td>Euro 5400</td>
+                </tr>
+                <tr>
+                  <td>Cleaning Solutions</td>
+                  <td>Euro 6400</td>
+                </tr>
+                <tr>
+                  <td>Landscaping Services</td>
+                  <td>Euro 5900</td>
+                </tr>
+                <tr>
+                  <td rowSpan="6">United Kingdom</td>
+                  <td>Electrical & Electronics Maintenance</td>
+                  <td>GBP 4900</td>
+                </tr>
+                <tr>
+                  <td>Plumbing Maintenance</td>
+                  <td>GBP 4900</td>
+                </tr>
+                <tr>
+                  <td>Computer System Maintenance</td>
+                  <td>GBP 6900</td>
+                </tr>
+                <tr>
+                  <td>Carpenter Services</td>
+                  <td>GBP 4900</td>
+                </tr>
+                <tr>
+                  <td>Cleaning Solutions</td>
+                  <td>GBP 6500</td>
+                </tr>
+                <tr>
+                  <td>Landscaping Services</td>
+                  <td>GBP 6000</td>
+                </tr>
+                <tr>
+                  <td>Switzerland</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Denmark</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Sweden</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Hungary</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Poland</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>North America Region</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td rowSpan="6">Canada</td>
+                  <td>Electrical & Electronics Maintenance</td>
+                  <td>CAD 6900</td>
+                </tr>
+                <tr>
+                  <td>Plumbing Maintenance</td>
+                  <td>CAD 6900</td>
+                </tr>
+                <tr>
+                  <td>Computer System Maintenance</td>
+                  <td>CAD 6900</td>
+                </tr>
+                <tr>
+                  <td>Carpenter Services</td>
+                  <td>CAD 8900</td>
+                </tr>
+                <tr>
+                  <td>Cleaning Solutions</td>
+                  <td>CAD 7900</td>
+                </tr>
+                <tr>
+                  <td>Landscaping Services</td>
+                  <td>CAD 7900</td>
+                </tr>
+                <tr>
+                  <td rowSpan="6">United States</td>
+                  <td>Electrical & Electronics Maintenance</td>
+                  <td>US$ 7000</td>
+                </tr>
+                <tr>
+                  <td>Plumbing Maintenance</td>
+                  <td>US$ 7000</td>
+                </tr>
+                <tr>
+                  <td>Computer System Maintenance</td>
+                  <td>US$ 7000</td>
+                </tr>
+                <tr>
+                  <td>Carpenter Services</td>
+                  <td>US$ 9000</td>
+                </tr>
+                <tr>
+                  <td>Cleaning Solutions</td>
+                  <td>US$ 9000</td>
+                </tr>
+                <tr>
+                  <td>Landscaping Services</td>
+                  <td>US$ 9000</td>
+                </tr>
+              </tbody>
+            </table>
+            <h4 className="mt-5">Individual Sales Model</h4>
+            <table className={`${styles.table} mt-4`}>
+              <thead>
+                <tr>
+                  <th>Country</th>
+                  <th>Package Cost [Yearly]</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Asia Region</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td>India</td>
+                  <td>INR 9999</td>
+                </tr>
+                <tr>
+                  <td>Turkey</td>
+                  <td>TRY 7499</td>
+                </tr>
+                <tr>
+                  <td>Thailand</td>
+                  <td>Thai B. 17500</td>
+                </tr>
+                <tr>
+                  <td>Singapore</td>
+                  <td>SGD$ 1099</td>
+                </tr>
+                <tr>
+                  <td>Hong Kong</td>
+                  <td>HK$ 6900</td>
+                </tr>
+                <tr>
+                  <td>United Arab Emirates</td>
+                  <td>Dirham 4900</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Europe Region</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Europe Union Nations</td>
+                  <td>Euro 950</td>
+                </tr>
+                <tr>
+                  <td>United Kingdom</td>
+                  <td>GBP 900</td>
+                </tr>
+                <tr>
+                  <td>Switzerland</td>
+                  <td>N/A</td>
+                </tr>
+                <tr>
+                  <td>Denmark</td>
+                  <td>N/A</td>
+                </tr>
+                <tr>
+                  <td>Sweden</td>
+                  <td>N/A</td>
+                </tr>
+                <tr>
+                  <td>Hungary</td>
+                  <td>N/A</td>
+                </tr>
+                <tr>
+                  <td>Poland</td>
+                  <td>N/A</td>
+                </tr>
+                <tr>
+                  <td>Czech Republic</td>
+                  <td>N/A</td>
+                </tr>
+                <tr>
+                  <td>Norway</td>
+                  <td>N/A</td>
+                </tr>
+                <tr>
+                  <td>Serbia</td>
+                  <td>N/A</td>
+                </tr>
+                <tr>
+                  <td>Romania</td>
+                  <td>N/A</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>North America Region</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Canada</td>
+                  <td>CAD 1200</td>
+                </tr>
+                <tr>
+                  <td>United States</td>
+                  <td>US$ 1350</td>
                 </tr>
               </tbody>
             </table>

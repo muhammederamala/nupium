@@ -1,0 +1,42 @@
+.scrollbarContainer::-webkit-scrollbar {
+  width: 1vh;
+}
+
+.scrollbarContainer::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.scrollbarContainer::-webkit-scrollbar-thumb {
+  background: #02abb6;
+  border-radius: 5px;
+}
+
+.scrollbarContainer::-webkit-scrollbar-thumb:hover {
+  background: #02abb7;
+}
+
+.section5locationHeading {
+  font-weight: 800;
+}
+
+.section5countriesButton {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #02abb6;
+  color: #02abb6;
+  background-color: white;
+  font-weight: 800;
+  transition: transform 0.5s;
+}
+
+.section5countriesButton:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  color: white;
+  background-color: #02abb6;
+}
+
+.section5icons {
+  font-size: 1.5rem;
+  color: #02abb6;
+}

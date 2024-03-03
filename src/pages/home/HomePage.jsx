@@ -24,6 +24,7 @@ import mainVideo from "../../assets/videos/main.mp4";
 import image7 from "../../assets/images/section3image1.jpg";
 
 import styles from "./HomePage.module.css";
+
 import ContactForm from "../../components/contactForm/ContactForm";
 import WelcomeText from "../../components/WelcomeText/WelcomeText";
 import Counter from "../../components/Counter/Counter";
@@ -32,6 +33,7 @@ import TestimonialSlider from "../../components/testimonials/Testimonials";
 import ServicesSection from "../../components/servicesSection/ServicesSection";
 import BenifitsTable from "../../components/BenifitsTable/BenifitsTable";
 import FeaturesScroll from "../../components/featuresScroll/FeaturesScroll";
+import Locations from "../../components/Locations/Locations";
 
 function HomePage() {
   const welcomeTextValue = [
@@ -61,11 +63,11 @@ function HomePage() {
   }, []);
 
   const asiaPacificCountries = [
-    "China",
-    "Japan",
+    "Thailand",
+    "Singapore",
     "India",
-    "Australia",
-    "South Korea",
+    "Hong Kong",
+    "UAE",
   ];
 
   const europeCountries = [
@@ -74,15 +76,18 @@ function HomePage() {
     "United Kingdom",
     "Italy",
     "Spain",
+    "Ireland",
+    "Netherland",
+    "Hungary",
+    "Switzerland",
+    "Poland",
+    "Sweden",
+    "Denmark",
+    "Belgium",
+    "Portugal",
   ];
 
-  const northAmericaCountries = [
-    "United States",
-    "Canada",
-    "Mexico",
-    "Guatemala",
-    "Honduras",
-  ];
+  const northAmericaCountries = ["USA", "Canada"];
 
   const [selectedRegion, setSelectedRegion] = useState(null);
 
@@ -292,7 +297,7 @@ function HomePage() {
         </Container>
       </section>
 
-      <section style={{ marginTop: "3rem" }}>
+      {/* <section style={{ marginTop: "3rem" }}>
         <Container>
           <Row className="text-center">
             <h1 style={{ fontWeight: "800" }}>How We Operate</h1>
@@ -405,49 +410,13 @@ function HomePage() {
             </Col>
           </Row>
         </Container>
-      </section>
+      </section> */}
 
       <section style={{ marginTop: "8rem" }}>
         <Container>
           <Row>
             <Col md={5}>
-              <Container>
-                <Row>
-                  <h1 className={`${styles.section5locationHeading}`}>
-                    Locations
-                  </h1>
-                </Row>
-                <Row className="mt-3">
-                  <Col xs={4}>
-                    <button
-                      className={`${styles.section5countriesButton}`}
-                      onClick={() => handleButtonClick("Asia Pacific")}
-                    >
-                      Asia Pacific
-                    </button>
-                  </Col>
-                  <Col xs={4}>
-                    <button
-                      className={`${styles.section5countriesButton}`}
-                      onClick={() => handleButtonClick("Europe")}
-                    >
-                      Europe
-                    </button>
-                  </Col>
-                  <Col xs={4}>
-                    <button
-                      className={`${styles.section5countriesButton}`}
-                      onClick={() => handleButtonClick("North America")}
-                    >
-                      North America
-                    </button>
-                  </Col>
-                </Row>
-                <Row className="mt-3">
-                  <h4 style={{ fontWeight: "800" }}>Our facilities</h4>
-                  <ul style={{ listStyleType: "none" }}>{renderCountries()}</ul>
-                </Row>
-              </Container>
+              <Locations />
             </Col>
             <Col md={7}>
               <BenifitsTable />
