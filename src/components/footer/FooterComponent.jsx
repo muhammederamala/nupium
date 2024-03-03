@@ -34,6 +34,10 @@ function FooterComponent() {
     dispatch(modalActions.showPackagesModal());
   };
 
+  const HandleDashboardLogin = () => {
+    dispatch(modalActions.showDashboardModal());
+  };
+
   return (
     <footer className={`footer ${styles.footerComponent}`}>
       <Container className="py-5">
@@ -81,7 +85,12 @@ function FooterComponent() {
             <Container>
               <Row className={`${styles.footerRows}`}>
                 <Col md={12}>
-                  <h6 className={styles.footerHeading}>Dashboard Login</h6>
+                  <h6
+                    className={styles.footerHeading}
+                    onClick={HandleDashboardLogin}
+                  >
+                    Dashboard Login
+                  </h6>
                 </Col>
               </Row>
               <Row className={`${styles.footerRows}`}>

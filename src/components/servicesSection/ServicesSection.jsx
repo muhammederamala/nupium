@@ -166,7 +166,7 @@ function ServicesSection() {
           <div className={styles.imageContainer2}>
             <div className={`${styles.imageOverlay} px-4`}>
               <span>
-                <h1 className={styles.overlayHeading}>Landscape Services</h1>
+                <h1 className={styles.overlayHeading}>Premises Review</h1>
                 <p className={styles.overlayContent}>
                   Landscaping Services refer to the ongoing care and upkeep of
                   outdoor spaces, such as residential or commercial lawns,

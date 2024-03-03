@@ -1,0 +1,15 @@
+.loginButtons {
+  color: white;
+  background-color: #02abb6;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  font-size: large;
+  font-weight: 600;
+  transition: transform 0.3s;
+  width: 100%;
+}
+
+.loginButtons:hover {
+  transform: scale(1.03);
+}

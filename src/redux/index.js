@@ -9,6 +9,7 @@ const initialModalState = {
   contactUsModal: false,
   salesModal: false,
   packagesModal: false,
+  dashboardModal: false,
 };
 
 const modalSlice = createSlice({
@@ -69,6 +70,14 @@ const modalSlice = createSlice({
     },
     hidePackagesModal(state) {
       state.packagesModal = false;
+    },
+
+    // dashboard login
+    showDashboardModal(state) {
+      state.dashboardModal = true;
+    },
+    hideDashboardLogin(state) {
+      state.dashboardModal = false;
     },
   },
 });
