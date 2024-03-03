@@ -1,7 +1,13 @@
 .imageContainer {
   overflow: hidden;
   position: relative;
-  height: 34rem;
+  height: 30rem;
+}
+
+.imageContainer2 {
+  overflow: hidden;
+  position: relative;
+  height: 28rem;
 }
 
 .imageOverlay {
@@ -27,6 +33,10 @@
 }
 
 .imageContainer:hover .image {
+  transform: scale(1.2);
+}
+
+.imageContainer2:hover .image {
   transform: scale(1.2);
 }
 

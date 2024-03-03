@@ -3,3 +3,16 @@
   font-weight: 800;
   margin-right: 2vh;
 }
+
+.vsluesIcons {
+  font-size: 10vh;
+}
+
+.valuesText {
+  font-weight: 700;
+  font-size: 3.5vh;
+}
+
+.valuesContainer {
+  background-color: rgba(34, 203, 214, 0.07);
+}

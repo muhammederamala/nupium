@@ -39,9 +39,9 @@ function ServicesSection() {
                   maintenance services are important for ensuring the safe and
                   reliable operation of electrical systems and equipment,
                   reducing the risk of electrical hazards, and minimizing
-                  downtime due to equipment failures. These services are
+                  {/* downtime due to equipment failures. These services are
                   performed on a regular basis or as needed based on the
-                  specific needs of the electrical system or equipment.
+                  specific needs of the electrical system or equipment. */}
                 </p>
                 <button
                   className={styles.overlayButton}
@@ -66,9 +66,10 @@ function ServicesSection() {
                   of tasks, such as checking and tightening fittings and
                   connections, inspecting and repairing pipes, replacing
                   worn-out fixtures, and ensuring proper ventilation and
-                  drainage. Regular maintenance can help prevent major plumbing
+                  drainage.
+                  {/*Regular maintenance can help prevent major plumbing
                   problems, increase the lifespan of plumbing systems, and
-                  improve the overall safety and health of occupants.
+                  improve the overall safety and health of occupants. */}
                 </p>
                 <button
                   className={styles.overlayButton}
@@ -87,15 +88,12 @@ function ServicesSection() {
               <span>
                 <h1 className={styles.overlayHeading}>Computer Maintenance</h1>
                 <p className={styles.overlayContent}>
-                  Electrical & Electronics Maintenance refers to the ongoing
-                  care and upkeep of electrical systems and equipment in
-                  residential, commercial, and industrial settings. Electrical
-                  maintenance services are important for ensuring the safe and
-                  reliable operation of electrical systems and equipment,
-                  reducing the risk of electrical hazards, and minimizing
-                  downtime due to equipment failures. These services are
-                  performed on a regular basis or as needed based on the
-                  specific needs of the electrical system or equipment.
+                  Computer System Maintenance refer to the ongoing support and
+                  upkeep of computer systems in an organization. These services
+                  cover a wide range of activities, including hardware repair
+                  and replacement, software updates and patches, security checks
+                  and maintenance, data backups and restoration, and overall
+                  system optimization and performance enhancement.
                 </p>
                 <button
                   className={styles.overlayButton}
@@ -111,7 +109,7 @@ function ServicesSection() {
       </Row>
       <Row className="mt-5">
         <Col style={{ marginTop: "2rem" }} md={4}>
-          <div className={styles.imageContainer}>
+          <div className={styles.imageContainer2}>
             <div className={`${styles.imageOverlay} px-4`}>
               <span>
                 <h1 className={styles.overlayHeading}>Carpenter Services</h1>
@@ -121,10 +119,10 @@ function ServicesSection() {
                   commercial, and industrial properties. Regular maintenance of
                   wooden structures is important to prevent wear and tear, and
                   deterioration due to weather, pests, and other factors.
-                  Carpenter maintenance services can also help increase the
+                  {/* Carpenter maintenance services can also help increase the
                   lifespan of wooden structures and fixtures, maintain their
                   appearance and functionality, and improve the safety and
-                  comfort.
+                  comfort. */}
                 </p>
                 <button
                   className={styles.overlayButton}
@@ -138,7 +136,7 @@ function ServicesSection() {
           </div>
         </Col>
         <Col style={{ marginTop: "2rem" }} md={4}>
-          <div className={styles.imageContainer}>
+          <div className={styles.imageContainer2}>
             <div className={`${styles.imageOverlay} px-4`}>
               <span>
                 <h1 className={styles.overlayHeading}>Cleaning Solutions</h1>
@@ -149,9 +147,9 @@ function ServicesSection() {
                   important for maintaining a clean and healthy indoor
                   environment, promoting the well-being of occupants, and
                   ensuring that indoor spaces remain safe and enjoyable to use.
-                  These services can be performed on a regular basis, such as
+                  {/* These services can be performed on a regular basis, such as
                   daily or weekly, or as needed based on the specific needs of
-                  the indoor space.
+                  the indoor space. */}
                 </p>
                 <button
                   className={styles.overlayButton}
@@ -165,7 +163,7 @@ function ServicesSection() {
           </div>
         </Col>
         <Col style={{ marginTop: "2rem" }} md={4}>
-          <div className={styles.imageContainer}>
+          <div className={styles.imageContainer2}>
             <div className={`${styles.imageOverlay} px-4`}>
               <span>
                 <h1 className={styles.overlayHeading}>Landscape Services</h1>
@@ -175,9 +173,10 @@ function ServicesSection() {
                   gardens, parks. Landscaping maintenance services are important
                   for maintaining the health and appearance of outdoor spaces,
                   promoting the growth of plants and grass, and ensuring that
-                  outdoor areas remain safe and enjoyable. These services can be
+                  outdoor areas remain safe and enjoyable.
+                  {/*These services can be
                   performed on a regular basis, such as weekly or monthly, or as
-                  needed based on the specific needs of the outdoor space.
+                  needed based on the specific needs of the outdoor space. */}
                 </p>
                 <button
                   className={styles.overlayButton}

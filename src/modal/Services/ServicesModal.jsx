@@ -55,22 +55,6 @@ function DeleteSubjectModal() {
     {
       serviceId: "3",
       serviceContent: [
-        "Maintain and grow the garden to ensure it meets specific requirements and expectations.",
-        "Basic maintenance such as cutting the grass, emptying bins, managing weeds control and leaf raking.",
-        "Plant and nurture new trees, flowers, and various plants.",
-        "Work with hand tools and basic light machinery such as plant vehicles, and small diggers.",
-        "Servicing all garden equipment and machinery.",
-        "Maintain a clean garden by clearing rubbish and litter from the garden and grounds.",
-        "Provide guidance to management on matters related to the garden.",
-        "Will advise management on the costs of plants and garden necessities with detailed written quotations and reports.",
-        "Ensure a safe environment for staff and clients by adhering to safety and health regulations.",
-        "Snow removal efforts may be overseen and/or assisted with. [If Require]",
-        "Lawns and/or sporting fields may be irrigated, mowed, raked, and trimmed.",
-      ],
-    },
-    {
-      serviceId: "4",
-      serviceContent: [
         "Computer or Desktop deployment, relocation and setup",
         "Virus and spyware removal & malicious software prevention",
         "Hardware Installations, & upgrading memory, hard drives, SSD’s video cards, disc drives etc",
@@ -85,7 +69,7 @@ function DeleteSubjectModal() {
       ],
     },
     {
-      serviceId: "5",
+      serviceId: "4",
       serviceContent: [
         "Curtain & Blinds Installation/Repairing",
         "Doors & Window Installation/Repairing",
@@ -102,7 +86,7 @@ function DeleteSubjectModal() {
       ],
     },
     {
-      serviceId: "6",
+      serviceId: "5",
       serviceContent: [
         "Washroom Cleaning",
         "Area Cleaning [Indoors & Outdoors]",
@@ -113,6 +97,22 @@ function DeleteSubjectModal() {
         "Appliances Cleaning",
         "Furniture Cleaning",
         "Keeping up to date everything which can be maintained by cleaning and keeping good hygiene of the premises",
+      ],
+    },
+    {
+      serviceId: "6",
+      serviceContent: [
+        "Maintain and grow the garden to ensure it meets specific requirements and expectations.",
+        "Basic maintenance such as cutting the grass, emptying bins, managing weeds control and leaf raking.",
+        "Plant and nurture new trees, flowers, and various plants.",
+        "Work with hand tools and basic light machinery such as plant vehicles, and small diggers.",
+        "Servicing all garden equipment and machinery.",
+        "Maintain a clean garden by clearing rubbish and litter from the garden and grounds.",
+        "Provide guidance to management on matters related to the garden.",
+        "Will advise management on the costs of plants and garden necessities with detailed written quotations and reports.",
+        "Ensure a safe environment for staff and clients by adhering to safety and health regulations.",
+        "Snow removal efforts may be overseen and/or assisted with. [If Require]",
+        "Lawns and/or sporting fields may be irrigated, mowed, raked, and trimmed.",
       ],
     },
   ];

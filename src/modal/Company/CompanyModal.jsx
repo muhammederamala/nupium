@@ -1,7 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Modal, Button, Container, Row, Col } from "react-bootstrap";
 import ModalPortal from "../ModalPortal";
-// import { useNavigate } from "react-router-dom";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChartLine,
+  faHeart,
+  faMagnifyingGlass,
+  faStopwatch,
+  faTruckFast,
+} from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./CompanyModal.module.css";
 
@@ -232,11 +240,149 @@ function CompanyModal() {
                       <h4>Our Values</h4>
                     </Col>
                   </Row>
-                  <Row>
-                    <p style={{ fontWeight: "bold",color:"#02abb6" }}>
-                      Commitment, Passionate, Transparency, Consistency,
-                      Efficiency
-                    </p>
+                  <Row className="mt-4">
+                    <Col
+                      md={4}
+                      className="d-flex align-items-center justify-content-center"
+                    >
+                      <Container className={`${styles.valuesContainer} py-2`}>
+                        <Row>
+                          <Col
+                            md={12}
+                            className="d-flex align-items-center justify-content-center"
+                          >
+                            <FontAwesomeIcon
+                              icon={faTruckFast}
+                              style={{ color: "#fcba03" }}
+                              className={`${styles.vsluesIcons}`}
+                            />
+                          </Col>
+                        </Row>
+                        <Row>
+                          <Col
+                            md={12}
+                            className="d-flex align-items-center justify-content-center"
+                          >
+                            <p className={`${styles.valuesText} m-0`}>
+                              Commitment
+                            </p>
+                          </Col>
+                        </Row>
+                      </Container>
+                    </Col>
+                    <Col
+                      md={4}
+                      className="d-flex align-items-center justify-content-center"
+                    >
+                      <Container className={`${styles.valuesContainer} py-2`}>
+                        <Row>
+                          <Col
+                            md={12}
+                            className="d-flex align-items-center justify-content-center"
+                          >
+                            <FontAwesomeIcon
+                              icon={faHeart}
+                              style={{ color: "#fc031c" }}
+                              className={`${styles.vsluesIcons}`}
+                            />
+                          </Col>
+                        </Row>
+                        <Row>
+                          <Col
+                            md={12}
+                            className="d-flex align-items-center justify-content-center"
+                          >
+                            <p className={`${styles.valuesText} m-0`}>
+                              Passionate
+                            </p>
+                          </Col>
+                        </Row>
+                      </Container>
+                    </Col>
+                    <Col
+                      md={4}
+                      className="d-flex align-items-center justify-content-center"
+                    >
+                      <Container className={`${styles.valuesContainer} py-2`}>
+                        <Row>
+                          <Col
+                            md={12}
+                            className="d-flex align-items-center justify-content-center"
+                          >
+                            <FontAwesomeIcon
+                              icon={faMagnifyingGlass}
+                              style={{ color: "#03024d" }}
+                              className={`${styles.vsluesIcons}`}
+                            />
+                          </Col>
+                        </Row>
+                        <Row>
+                          <Col
+                            md={12}
+                            className="d-flex align-items-center justify-content-center"
+                          >
+                            <p className={`${styles.valuesText} m-0`}>
+                              Transparency
+                            </p>
+                          </Col>
+                        </Row>
+                      </Container>
+                    </Col>
+                  </Row>
+                  <Row className="mt-4">
+                    <Col md={2}></Col>
+                    <Col md={4}>
+                      <Container className={`${styles.valuesContainer} py-2`}>
+                        <Row>
+                          <Col
+                            md={12}
+                            className="d-flex align-items-center justify-content-center"
+                          >
+                            <FontAwesomeIcon
+                              icon={faChartLine}
+                              style={{ color: "#087a04" }}
+                              className={`${styles.vsluesIcons}`}
+                            />
+                          </Col>
+                        </Row>
+                        <Row>
+                          <Col
+                            md={12}
+                            className="d-flex align-items-center justify-content-center"
+                          >
+                            <p className={`${styles.valuesText} m-0`}>
+                              Consistency
+                            </p>
+                          </Col>
+                        </Row>
+                      </Container>
+                    </Col>
+                    <Col md={4}>
+                      <Container className={`${styles.valuesContainer} py-2`}>
+                        <Row>
+                          <Col
+                            md={12}
+                            className="d-flex align-items-center justify-content-center"
+                          >
+                            <FontAwesomeIcon
+                              icon={faStopwatch}
+                              style={{ color: "#03024d" }}
+                              className={`${styles.vsluesIcons}`}
+                            />
+                          </Col>
+                        </Row>
+                        <Row>
+                          <Col
+                            md={12}
+                            className="d-flex align-items-center justify-content-center"
+                          >
+                            <p className={`${styles.valuesText} m-0`}>
+                              Efficiency
+                            </p>
+                          </Col>
+                        </Row>
+                      </Container>
+                    </Col>
                   </Row>
                 </Container>
               </Row>
