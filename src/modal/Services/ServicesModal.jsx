@@ -88,15 +88,13 @@ function DeleteSubjectModal() {
     {
       serviceId: "5",
       serviceContent: [
-        "Washroom Cleaning",
-        "Area Cleaning [Indoors & Outdoors]",
-        "Water Tank Cleaning",
-        "Appliances Cleaning",
-        "Glasses Cleaning",
-        "Pantry Cleaning",
-        "Appliances Cleaning",
-        "Furniture Cleaning",
-        "Keeping up to date everything which can be maintained by cleaning and keeping good hygiene of the premises",
+        "Premises review by Facility Management Manager",
+        "Helping to change parts or and to make decisions about condition of premises maintenance status",
+        "Drafting reports and share it with the owner or any representative other of the premises",
+        "Advising on increasing efficiency and cost effectiveness",
+        "Supervising multi-disciplinary services team that service as per standard of the premises",
+        "Ensuring that facilities such as electrical, plumbing, computers, and others are well maintained or not, if not then give consulting about to make changes",
+        "Review of premises is just like you do your health checkups, its check-up of your premises maintenance condition",
       ],
     },
     {

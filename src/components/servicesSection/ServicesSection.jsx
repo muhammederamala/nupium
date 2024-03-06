@@ -168,12 +168,8 @@ function ServicesSection() {
               <span>
                 <h1 className={styles.overlayHeading}>Premises Review</h1>
                 <p className={styles.overlayContent}>
-                  Landscaping Services refer to the ongoing care and upkeep of
-                  outdoor spaces, such as residential or commercial lawns,
-                  gardens, parks. Landscaping maintenance services are important
-                  for maintaining the health and appearance of outdoor spaces,
-                  promoting the growth of plants and grass, and ensuring that
-                  outdoor areas remain safe and enjoyable.
+                  Refers to the assessment of the maintenance status of a
+                  property by a Facility Management Manager
                   {/*These services can be
                   performed on a regular basis, such as weekly or monthly, or as
                   needed based on the specific needs of the outdoor space. */}

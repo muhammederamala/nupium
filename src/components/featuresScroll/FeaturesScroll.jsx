@@ -103,6 +103,137 @@ const FeaturesScroll = () => {
     };
   }, []);
 
+  const featuresMapArray = [
+    {
+      col1: {
+        content:
+          "We keep clients informed of upcoming services, updates, and important announcements through real-time notifications on the platform and via email.",
+      },
+      col2: {
+        content:
+          "User Can Track service records by just login into user dashboard",
+      },
+      icon: faBell,
+      ref: ref1,
+      inView: inView1,
+    },
+    {
+      col1: {
+        content:
+          "Faster service with quality solutions and at a reasonable price",
+      },
+      col2: {
+        content:
+          "Improved clarity of solutions and process will not be tedious since we will be giving service at a convenient price",
+      },
+      icon: faTruckFast,
+      ref: ref2,
+      inView: inView2,
+    },
+    {
+      col1: {
+        content: "Technician minutes away from member’s property",
+      },
+      col2: {
+        content: "100+ services under single package",
+      },
+      icon: faHelmetSafety,
+      ref: ref3,
+      inView: inView3,
+    },
+    {
+      col1: {
+        content: "Track Your Service History",
+      },
+      col2: {
+        content: "24x7 Help Desk",
+      },
+      icon: faStopwatch20,
+      ref: ref4,
+      inView: inView4,
+    },
+    {
+      col1: {
+        content: "Subscription Based Maintenance Service Provider",
+      },
+      col2: {
+        content: "Raise Your Service ticket both online & offline mode",
+      },
+      icon: faTicket,
+      ref: ref5,
+      inView: inView5,
+    },
+    {
+      col1: {
+        content: "Multiple categories of solutions under single annual package",
+      },
+      col2: {
+        content:
+          "Highly Skilled Technicians follow all SOP’s as per industry standards",
+      },
+      icon: faBoxesStacked,
+      ref: ref6,
+      inView: inView6,
+    },
+  ];
+
+  const pcFeatures = (
+    <Fragment>
+      {featuresMapArray.map((item, index) => (
+        <Row key={index} className={styles.container}>
+          <Col
+            md={5}
+            className="d-flex justify-content-center align-items-center px-0"
+          >
+            <Container>
+              <Row>
+                <Col md={5}></Col>
+                <Col md={7}>
+                  <div className={`${styles.box}`}>
+                    <p className={`${styles.text}`}>{item.col1.content}</p>
+                  </div>
+                </Col>
+              </Row>
+            </Container>
+          </Col>
+          <Col className="px-0" style={{ height: "100%" }} md={2} xs={0}>
+            <div className={`${styles.verticalIconContainer}`}>
+              <div
+                className={`d-flex align-items-center justify-content-center ${
+                  styles.verticalIconCircle
+                } ${item.inView ? "animate__animated animate__bounceIn" : ""}`}
+              >
+                <FontAwesomeIcon
+                  ref={item.ref}
+                  className={`${styles.verticalIcons} ${
+                    item.inView ? "animate__animated animate__bounceIn" : ""
+                  }`}
+                  icon={item.icon}
+                />
+              </div>
+            </div>
+            <div className={styles.verticalLine}></div>
+          </Col>
+          <Col
+            md={5}
+            className="d-flex justify-content-center align-items-center px-0"
+          >
+            <Container>
+              <Row>
+                <Col xs={6}>
+                  <div className={styles.box}>
+                    <p className={`${styles.text}`}>{item.col2.content}</p>
+                  </div>
+                </Col>
+                <Col xs={6}></Col>
+              </Row>
+            </Container>
+          </Col>
+        </Row>
+      ))}
+    </Fragment>
+  );
+
   const featuresDesktop = (
     <Fragment>
       <Row className={styles.container}>
@@ -142,7 +273,18 @@ const FeaturesScroll = () => {
         <Col
           md={5}
           className="d-flex justify-content-center align-items-center px-0"
-        ></Col>
+        >
+          <Container>
+            <Row>
+              <Col xs={6}>
+                <div className={styles.box}>
+                  <p className={`${styles.text}`}>{featuresArray[1]}</p>
+                </div>
+              </Col>
+              <Col xs={6}></Col>
+            </Row>
+          </Container>
+        </Col>
       </Row>
       <Row className={styles.container}>
         <Col
@@ -576,7 +718,7 @@ const FeaturesScroll = () => {
     </Fragment>
   );
 
-  return isLargeScreen ? <>{featuresDesktop}</> : null;
+  return isLargeScreen ? <>{pcFeatures}</> : null;
 };
 
 export default FeaturesScroll;
