@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
 import scrollbarStyles from "./Scrollbar.module.css";
@@ -14,6 +14,8 @@ function Locations() {
     "India",
     "Hong Kong",
     "UAE",
+    "Australia",
+    "New Zealand",
   ];
 
   const europeCountries = [
@@ -40,6 +42,10 @@ function Locations() {
   const handleButtonClick = (region) => {
     setSelectedRegion(region);
   };
+
+  useEffect(() => {
+    handleButtonClick("Asia Pacific");
+  }, []);
 
   const renderCountries = () => {
     switch (selectedRegion) {
@@ -101,6 +107,7 @@ function Locations() {
         return null;
     }
   };
+  
   return (
     <Container>
       <Row>
