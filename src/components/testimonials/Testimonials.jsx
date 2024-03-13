@@ -10,19 +10,19 @@ const TestimonialSlider = () => {
 
   const testimonials = [
     {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit augue id felis sollicitudin consequat.",
+      text: "FixTech Care exceeded my expectations with their thorough maintenance service. From plumbing to electrical work, they ensured every aspect of my premises was in top-notch condition. Highly recommended!",
       author: "John Doe",
     },
     {
-      text: "Vestibulum at quam non mi condimentum tempus sed id risus.",
+      text: "I'm incredibly impressed with FixTech Care's prompt response and professional handling of our electrical issues. They not only fixed the problem efficiently but also provided valuable advice for future maintenance. Great job!",
       author: "Jane Smith",
     },
     {
-      text: "Praesent rutrum eros vitae libero fermentum, at feugiat nisi scelerisque.",
+      text: "FixTech Care's computer maintenance service saved us from potential downtime. Their proactive approach in identifying and resolving issues has greatly improved our system's performance. Thank you for your reliable support!",
       author: "Alice Johnson",
     },
     {
-      text: "Donec ullamcorper vehicula quam, sit amet efficitur eros auctor eu. ",
+      text: "As a property manager, I rely on FixTech Care for comprehensive premise reviews. Their attention to detail and meticulous reports have been instrumental in maintaining our buildings' safety and functionality. A reliable partner indeed!",
       author: "Bob Anderson",
     },
   ];

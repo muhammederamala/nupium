@@ -11,7 +11,7 @@ import image2 from "../../assets/images/section2plumbing.jpg";
 import image3 from "../../assets/images/section2computer.jpg";
 import image4 from "../../assets/images/section2carpenter.jpg";
 import image5 from "../../assets/images/section2cleaning.jpg";
-import image6 from "../../assets/images/section2landscaping.jpeg";
+import image6 from "../../assets/images/section2Premise.jpg";
 
 function ServicesSection() {
   const dispatch = useDispatch();

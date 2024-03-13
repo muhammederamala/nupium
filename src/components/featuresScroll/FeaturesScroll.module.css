@@ -36,8 +36,6 @@
   font-size: 2rem;
 }
 
-
-
 .boxAnimate {
   transform: scale(1.5);
 }
@@ -45,3 +43,4 @@
 .text {
   font-weight: 800;
 }
+
