@@ -81,10 +81,10 @@ const CustomDropdownDownload = ({ scrolled }) => {
         <strong>{title}</strong>
       </button>
       <ul className={styles.dropdownMenu} style={{ padding: "0px" }}>
-        <Container style={{ width: "30rem" }}>
+        <Container className={`${styles.containerWidth}`}>
           <Row>
             {countries.map((curr, index) => (
-              <Col className="px-0" md={4}>
+              <Col className="px-0" md={4} xs={4}>
                 <li
                   style={{ width: "100%" }}
                   key={index}
@@ -96,6 +96,7 @@ const CustomDropdownDownload = ({ scrolled }) => {
                   {curr.Countries.map((country, index) => (
                     <li
                       key={index}
+                      style={{ width: "100%" }}
                       className={`${styles.dropdownItem}`}
                       onClick={() => handleDownload(country.pdf, country.name)}
                     >

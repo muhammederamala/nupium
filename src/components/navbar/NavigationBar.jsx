@@ -60,9 +60,10 @@ const NavigationBar = () => {
         >
           <Nav className="mx-auto">
             <div
-              className={`d-flex align-items-center px-2 ${
+              className={`d-flex justify-content-center px-2 mx-2 ${
                 scrolled ? styles.scrolledNavItem : styles.navItem
               }`}
+              style={{padding:"10px"}}
             >
               Subscribe Now
             </div>
@@ -77,9 +78,10 @@ const NavigationBar = () => {
               options={["Partner Login", "User Login"]}
             />
             <div
-              className={`d-flex align-items-center px-2 ${
+              className={`d-flex align-items-center justify-content-center px-2 mx-2 ${
                 scrolled ? styles.scrolledNavItem : styles.navItem
               }`}
+              style={{padding:"10px"}}
             >
               Blogs
             </div>

@@ -17,7 +17,7 @@
 }
 
 .customToggler {
-  color: #e07604;
+  color: #02abb6;
 }
 
 @media (max-width: 768px) {
@@ -34,6 +34,27 @@
 
   .phoneNumber {
     color: black;
+  }
+
+  .navItem {
+    display: block;
+    font-weight: 700;
+  }
+
+  .navItem:hover {
+    background-color: #02abb6 !important;
+    color: white;
+    cursor: pointer;
+  }
+
+  .scrolledNavItem {
+    display: block;
+    font-weight: 700;
+  }
+  .scrolledNavItem:hover {
+    cursor: pointer;
+    background-color: #02abb6;
+    color: white;
   }
 }
 

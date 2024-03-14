@@ -1,3 +1,7 @@
+.containerWidth{
+  width: 30rem;
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -76,6 +80,10 @@
 }
 
 @media (max-width: 768px) {
+  .containerWidth{
+    width: 20rem;
+  }
+
   .dropdownButton {
     color: black;
     background-color: transparent;
@@ -85,7 +93,23 @@
     color: white;
   }
   .dropdown:hover {
-    background-color: #e07604;
+    background-color: #02abb6;
+    color: white;
+  }
+
+  .dropdownMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    border-radius: 5%;
+    background-color: #f9f9f9;
+    min-width: 60px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .scrollableContainer{
+    max-height: 15rem;
   }
 }
 

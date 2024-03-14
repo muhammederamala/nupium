@@ -1,0 +1,27 @@
+.subscriptionIcons {
+  font-size: 2rem;
+  color: #02abb6;
+}
+
+.subscriptionText {
+  font-weight: 800;
+  margin: 0px;
+}
+
+.section6box {
+  border: 1px solid lightgray;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.section6heading {
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: #02abb6;
+  color: white;
+  font-weight: 800;
+}
+
+.section6list {
+  line-height: 1.9;
+  font-weight: 500;
+}
