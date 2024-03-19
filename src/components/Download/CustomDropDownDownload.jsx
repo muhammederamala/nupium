@@ -15,7 +15,18 @@ import UaePdf from "../../assets/brochures/Uae.pdf";
 import UKPdf from "../../assets/brochures/UK.pdf";
 import USAPdf from "../../assets/brochures/USA.pdf";
 
-const CustomDropdownDownload = ({ scrolled }) => {
+import EnterpriseAustraliaPdf from "../../assets/brochures/enterprise/Australia.pdf";
+import EnterpriseCanadaPdf from "../../assets/brochures/enterprise/Canada.pdf";
+import EnterpriseEuropePdf from "../../assets/brochures/enterprise/Europe.pdf";
+import EnterpriseHongKongPdf from "../../assets/brochures/enterprise/hongKong.pdf";
+import EnterpriseIndiaPdf from "../../assets/brochures/enterprise/India.pdf";
+import EnterpriseSingaporePdf from "../../assets/brochures/enterprise/Singapore.pdf";
+import EnterpriseThailandPdf from "../../assets/brochures/enterprise/Thailand.pdf";
+import EnterpriseUaePdf from "../../assets/brochures/enterprise/UAE.pdf";
+import EnterpriseUKPdf from "../../assets/brochures/enterprise/UK.pdf";
+import EnterpriseUSAPdf from "../../assets/brochures/enterprise/USA.pdf";
+
+const CustomDropdownDownload = ({ scrolled, isEnterprise }) => {
   const countries = [
     {
       title: "Asia Pacific",
@@ -57,6 +68,50 @@ const CustomDropdownDownload = ({ scrolled }) => {
     },
   ];
 
+  const enterpriseCountries = [
+    {
+      title: "Asia Pacific",
+      Countries: [
+        { name: "India", pdf: EnterpriseIndiaPdf },
+        { name: "Singapore", pdf: EnterpriseSingaporePdf },
+        { name: "Thailand", pdf: EnterpriseThailandPdf },
+        { name: "Australia", pdf: EnterpriseAustraliaPdf },
+        { name: "Hong Kong", pdf: EnterpriseHongKongPdf },
+        { name: "UAE", pdf: EnterpriseUaePdf },
+      ],
+    },
+    {
+      title: "Europe",
+      Countries: [
+        { name: "United Kingdom", pdf: EnterpriseUKPdf },
+        { name: "Ireland", pdf: EnterpriseEuropePdf },
+        { name: "Netherlands", pdf: EnterpriseEuropePdf },
+        { name: "Italy", pdf: EnterpriseEuropePdf },
+        { name: "Hungary", pdf: EnterpriseEuropePdf },
+        { name: "Switzerland", pdf: EnterpriseEuropePdf },
+        { name: "Germany", pdf: EnterpriseEuropePdf },
+        { name: "Poland", pdf: EnterpriseEuropePdf },
+        { name: "Sweden", pdf: EnterpriseEuropePdf },
+        { name: "Denmark", pdf: EnterpriseEuropePdf },
+        { name: "Belgium", pdf: EnterpriseEuropePdf },
+        { name: "France", pdf: EnterpriseEuropePdf },
+        { name: "Spain", pdf: EnterpriseEuropePdf },
+        { name: "Portugal", pdf: EnterpriseEuropePdf },
+      ],
+    },
+    {
+      title: "North America",
+      Countries: [
+        { name: "Canada", pdf: EnterpriseCanadaPdf },
+        { name: "United States of America", pdf: EnterpriseUSAPdf },
+      ],
+    },
+  ];
+
+  console.log(isEnterprise);
+
+  const currCountries = isEnterprise ? enterpriseCountries : countries;
+
   const handleDownload = (pdfUrl, filename) => {
     const link = document.createElement("a");
     link.href = pdfUrl;
@@ -83,7 +138,7 @@ const CustomDropdownDownload = ({ scrolled }) => {
       <ul className={styles.dropdownMenu} style={{ padding: "0px" }}>
         <Container className={`${styles.containerWidth}`}>
           <Row>
-            {countries.map((curr, index) => (
+            {currCountries.map((curr, index) => (
               <Col className="px-0" md={4} xs={4}>
                 <li
                   style={{ width: "100%" }}

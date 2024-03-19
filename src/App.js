@@ -5,6 +5,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import HomePage from "./pages/home/HomePage";
+import EnterpriseHomePage from './pages/Enterprise/Home/EnterpriseHomePage'
 import Layout from "./Layout/Layout";
 
 import DeleteSubjectModal from "./modal/Services/ServicesModal";
@@ -22,6 +23,7 @@ function App() {
     createRoutesFromElements(
       <Route element={<Layout />}>
         <Route path="/" element={<HomePage />} />
+        <Route path="/enterprise" element={<EnterpriseHomePage />} />
       </Route>
     )
   );

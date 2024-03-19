@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
+import { useLocation } from "react-router-dom";
 
 import styles from "./ServicesSection.module.css";
 
@@ -14,6 +15,7 @@ import image5 from "../../assets/images/section2cleaning.jpg";
 import image6 from "../../assets/images/section2Premise.jpg";
 
 function ServicesSection() {
+  const location = useLocation();
   const dispatch = useDispatch();
 
   const handleLearnMoreClick = (serviceId) => {
@@ -162,29 +164,62 @@ function ServicesSection() {
             <Image src={image5} fluid className={styles.image} />
           </div>
         </Col>
-        <Col style={{ marginTop: "2rem" }} md={4}>
-          <div className={styles.imageContainer2}>
-            <div className={`${styles.imageOverlay} px-4`}>
-              <span>
-                <h1 className={styles.overlayHeading}>Premises Review</h1>
-                <p className={styles.overlayContent}>
-                  Refers to the assessment of the maintenance status of a
-                  property by a Facility Management Manager
-                  {/*These services can be
+        {location.pathname.startsWith("/enterprise") ? (
+          <Col style={{ marginTop: "2rem" }} md={4}>
+            <div className={styles.imageContainer2}>
+              <div className={`${styles.imageOverlay} px-4`}>
+                <span>
+                  <h1 className={styles.overlayHeading}>
+                    Landscaping Solutions
+                  </h1>
+                  <p className={styles.overlayContent}>
+                    Landscaping Services refer to the ongoing care and upkeep of
+                    outdoor spaces, such as residential or commercial lawns,
+                    gardens, parks, and other outdoor areas. Landscaping
+                    maintenance services are important for maintaining the
+                    health and appearance of outdoor spaces, promoting the
+                    growth of plants and grass, preventing damage from pests and
+                    {/* disease, and ensuring that outdoor areas remain safe and
+                    enjoyable for people to use. These services can be performed
+                    on a regular basis, such as weekly or monthly, or as needed
+                    based on the specific needs of the outdoor space. */}
+                  </p>
+                  <button
+                    className={styles.overlayButton}
+                    onClick={() => handleLearnMoreClick(7)}
+                  >
+                    Learn More
+                  </button>
+                </span>
+              </div>
+              <Image src={image6} fluid className={styles.image} />
+            </div>
+          </Col>
+        ) : (
+          <Col style={{ marginTop: "2rem" }} md={4}>
+            <div className={styles.imageContainer2}>
+              <div className={`${styles.imageOverlay} px-4`}>
+                <span>
+                  <h1 className={styles.overlayHeading}>Premises Review</h1>
+                  <p className={styles.overlayContent}>
+                    Refers to the assessment of the maintenance status of a
+                    property by a Facility Management Manager
+                    {/*These services can be
                   performed on a regular basis, such as weekly or monthly, or as
                   needed based on the specific needs of the outdoor space. */}
-                </p>
-                <button
-                  className={styles.overlayButton}
-                  onClick={() => handleLearnMoreClick(6)}
-                >
-                  Learn More
-                </button>
-              </span>
+                  </p>
+                  <button
+                    className={styles.overlayButton}
+                    onClick={() => handleLearnMoreClick(6)}
+                  >
+                    Learn More
+                  </button>
+                </span>
+              </div>
+              <Image src={image6} fluid className={styles.image} />
             </div>
-            <Image src={image6} fluid className={styles.image} />
-          </div>
-        </Col>
+          </Col>
+        )}
       </Row>
     </Container>
   );

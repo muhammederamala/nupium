@@ -109,6 +109,22 @@ function DeleteSubjectModal() {
         "Review of premises is just like you do your health checkups, its check-up of your premises maintenance condition",
       ],
     },
+    {
+      serviceId: "7",
+      serviceContent: [
+        "Maintain and grow the garden to ensure it meets specific requirements and expectations.",
+        "Basic maintenance such as cutting the grass, emptying bins, managing weeds control and leaf raking.",
+        "Plant and nurture new trees, flowers, and various plants.",
+        "Work with hand tools and basic light machinery such as plant vehicles, and small diggers.",
+        "Servicing all garden equipment and machinery.",
+        "Maintain a clean garden by clearing rubbish and litter from the garden and grounds.",
+        "Provide guidance to management on matters related to the garden.",
+        "Will advise management on the costs of plants and garden necessities with detailed written quotations and reports.",
+        "Ensure a safe environment for staff and clients by adhering to safety and health regulations.",
+        "Snow removal efforts may be overseen and/or assisted with. [If Require]",
+        "Lawns and/or sporting fields may be irrigated, mowed, raked, and trimmed.",
+      ],
+    },
   ];
 
   useEffect(() => {

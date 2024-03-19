@@ -3,10 +3,10 @@ import { Row, Col, Container } from "react-bootstrap";
 import styles from "./FeaturesScroll.module.css";
 
 import { useInView } from "react-intersection-observer";
+import { useMediaQuery } from "react-responsive";
+import { useLocation } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import { useMediaQuery } from "react-responsive";
 import {
   faBell,
   faBox,
@@ -22,22 +22,8 @@ import {
   faTruckFast,
 } from "@fortawesome/free-solid-svg-icons";
 
-const featuresArray = [
-  "We keep clients informed of upcoming services, updates, and important announcements through real-time notifications on the platform and via email.",
-  "User Can Track service records by just login into user dashboard ",
-  "Faster service with quality solutions and at a reasonable price ",
-  "Improved clarity of solutions and process will not be tedious since we will be giving service at a convenient price",
-  "Technician minutes away from member’s property ",
-  "100+ services under single package",
-  "Track Your Service History",
-  "24x7 Help Desk ",
-  "Subscription Based Maintenance Service Provider ",
-  "Raise Your Service ticket both online & offline mode ",
-  "Multiple categories of solutions under single annual package ",
-  "Highly Skilled Technicians follow all SOP’s as per industry standards ",
-];
-
 const FeaturesScroll = () => {
+  const location = useLocation();
   const [ref1, inView1] = useInView({
     threshold: 0.3,
   });
@@ -177,9 +163,53 @@ const FeaturesScroll = () => {
     },
   ];
 
+  const enterpriseFeaturesMapArray = [
+    {
+      col1: {
+        content:
+          "The only Subscription Based Facility Maintenance Service Provider for Enterprises.",
+      },
+      col2: {
+        content:
+          "Improved clarity of solutions and process will not be tedious since we will be giving service at a convenient price",
+      },
+      icon: faBell,
+      ref: ref1,
+      inView: inView1,
+    },
+    {
+      col1: {
+        content:
+          "Impressive and permanent solutions with customer satisfaction ",
+      },
+      col2: {
+        content: "100+ services under single package ",
+      },
+      icon: faTruckFast,
+      ref: ref2,
+      inView: inView2,
+    },
+    {
+      col1: {
+        content:
+          "Client can Track service records by just login into dashboard ",
+      },
+      col2: {
+        content: "24x7 Help Desk ",
+      },
+      icon: faHelmetSafety,
+      ref: ref3,
+      inView: inView3,
+    },
+  ];
+
+  const currFeatures = location.pathname.startsWith("/enterprise")
+    ? enterpriseFeaturesMapArray
+    : featuresMapArray;
+
   const pcFeatures = (
     <Fragment>
-      {featuresMapArray.map((item, index) => (
+      {currFeatures.map((item, index) => (
         <Row key={index} className={styles.container}>
           <Col
             md={5}
@@ -236,7 +266,7 @@ const FeaturesScroll = () => {
 
   const mobileFeatures = (
     <Fragment>
-      {featuresMapArray.map((item, index) => (
+      {currFeatures.map((item, index) => (
         <Row key={index} className={styles.container}>
           <Col
             xs={5}

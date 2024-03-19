@@ -17,7 +17,7 @@ import CustomDropdown from "../CustomDropDown/CustomDropdown";
 import CustomDropdownDownload from "../Download/CustomDropDownDownload";
 import LanguageSelector from "../LanguageSelector/LanguageSelector";
 
-const NavigationBar = () => {
+const NavigationBar = ({ isEnterprise }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -63,7 +63,7 @@ const NavigationBar = () => {
               className={`d-flex justify-content-center px-2 mx-2 ${
                 scrolled ? styles.scrolledNavItem : styles.navItem
               }`}
-              style={{padding:"10px"}}
+              style={{ padding: "10px" }}
             >
               Subscribe Now
             </div>
@@ -75,13 +75,13 @@ const NavigationBar = () => {
             <CustomDropdownDownload
               scrolled={scrolled}
               title="Download"
-              options={["Partner Login", "User Login"]}
+              isEnterprise={isEnterprise}
             />
             <div
               className={`d-flex align-items-center justify-content-center px-2 mx-2 ${
                 scrolled ? styles.scrolledNavItem : styles.navItem
               }`}
-              style={{padding:"10px"}}
+              style={{ padding: "10px" }}
             >
               Blogs
             </div>
