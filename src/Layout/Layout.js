@@ -12,7 +12,7 @@ function Layout() {
 
   useEffect(() => {
     setHideLayouts(location.pathname == "/");
-  }, []);
+  }, [location.pathname]);
 
   const [isEnterprise, setIsEnterprise] = useState(
     location.pathname.startsWith("/enterprise")
