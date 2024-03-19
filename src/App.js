@@ -5,7 +5,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import HomePage from "./pages/home/HomePage";
-import EnterpriseHomePage from './pages/Enterprise/Home/EnterpriseHomePage'
+import EnterpriseHomePage from "./pages/Enterprise/Home/EnterpriseHomePage";
+import WelcomePage from "./pages/welcome/WelcomePage";
 import Layout from "./Layout/Layout";
 
 import DeleteSubjectModal from "./modal/Services/ServicesModal";
@@ -22,7 +23,8 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route element={<Layout />}>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<WelcomePage />} />
+        <Route path="/individual" element={<HomePage />} />
         <Route path="/enterprise" element={<EnterpriseHomePage />} />
       </Route>
     )

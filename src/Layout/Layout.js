@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { Outlet } from "react-router";
 
 import { useLocation } from "react-router-dom";
@@ -8,17 +8,23 @@ import FooterComponent from "../components/footer/FooterComponent";
 
 function Layout() {
   const location = useLocation();
+  const [hideLayouts, setHideLayouts] = useState(false);
+
+  useEffect(() => {
+    setHideLayouts(location.pathname == "/");
+  }, []);
+
   const [isEnterprise, setIsEnterprise] = useState(
     location.pathname.startsWith("/enterprise")
   );
 
   return (
     <Fragment>
-      <NavigationBar isEnterprise={isEnterprise} />
+      {!hideLayouts && <NavigationBar isEnterprise={isEnterprise} />}
       <main>
         <Outlet />
       </main>
-      <FooterComponent />
+      {!hideLayouts && <FooterComponent />}
     </Fragment>
   );
 }
