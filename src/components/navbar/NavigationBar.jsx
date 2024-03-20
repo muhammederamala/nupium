@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
+import { UseDispatch, useDispatch } from "react-redux";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -17,7 +18,10 @@ import CustomDropdown from "../CustomDropDown/CustomDropdown";
 import CustomDropdownDownload from "../Download/CustomDropDownDownload";
 import LanguageSelector from "../LanguageSelector/LanguageSelector";
 
+import { modalActions } from "../../redux";
+
 const NavigationBar = ({ isEnterprise }) => {
+  const dispatch = useDispatch();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -34,6 +38,10 @@ const NavigationBar = ({ isEnterprise }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [scrolled]);
+
+  const handleSubscribeNowClick = () => {
+    dispatch(modalActions.hideSubscriptionFormModal());
+  };
 
   return (
     <Navbar
@@ -64,6 +72,7 @@ const NavigationBar = ({ isEnterprise }) => {
                 scrolled ? styles.scrolledNavItem : styles.navItem
               }`}
               style={{ padding: "10px" }}
+              onClick={handleSubscribeNowClick}
             >
               Subscribe Now
             </div>

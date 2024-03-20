@@ -18,6 +18,7 @@ import Sales from "./modal/Sales/Sales";
 import PackagesModal from "./modal/packages/PackagesModal";
 import DashboardLoginModal from "./modal/DashboardLogin/DashboardLoginModal";
 import CorporateOfficesModal from "./modal/CorporateOffices/CorporateOfficesModal";
+import SubscrptionForm from "./modal/SubscriptionForm/SubscriptionForm";
 
 function App() {
   const router = createBrowserRouter(
@@ -41,6 +42,7 @@ function App() {
       <PackagesModal />
       <DashboardLoginModal />
       <CorporateOfficesModal />
+      <SubscrptionForm />
       <RouterProvider router={router} />
     </div>
   );

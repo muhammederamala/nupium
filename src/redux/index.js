@@ -11,6 +11,7 @@ const initialModalState = {
   packagesModal: false,
   dashboardModal: false,
   corporateOfficesModal: false,
+  subscriptionFormModal: false,
 };
 
 const modalSlice = createSlice({
@@ -87,6 +88,14 @@ const modalSlice = createSlice({
     },
     hideCorporateOfficesModal(state) {
       state.corporateOfficesModal = false;
+    },
+
+    // subscription form
+    showSubscriptionFormModal(state) {
+      state.subscriptionFormModal = true;
+    },
+    hideSubscriptionFormModal(state) {
+      state.subscriptionFormModal = true;
     },
   },
 });
