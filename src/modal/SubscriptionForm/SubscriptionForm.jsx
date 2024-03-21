@@ -34,10 +34,9 @@ function SubscriptionForm() {
   const timingsRef = useRef(null);
   const solutionRef = useRef(null);
 
-  const [solution, setSolution] = useState();
-  const solutionReduxState = useSelector(
-    (state) => state.subscriptionForm.solution
-  );
+  // const solutionReduxState = useSelector(
+  //   (state) => state.subscriptionForm.solution
+  // );
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -59,7 +58,7 @@ function SubscriptionForm() {
       businessName: businessNameRef.current.value,
       categoryType: categoryTypeRef.current.value,
       activationDate: activationDateRef.current.value,
-      solution: solutionReduxState,
+      // solution: solutionReduxState,
       timings: Array.from(
         timingsRef.current.querySelectorAll('input[type="checkbox"]:checked')
       ).map((checkbox) => checkbox.value),

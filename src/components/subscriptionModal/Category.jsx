@@ -1,5 +1,7 @@
 import React, { useState, forwardRef } from "react";
 import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+
 import styles from "./Category.module.css";
 
 import { subscriptionFormActions } from "../../redux";
@@ -27,6 +29,10 @@ const Category = forwardRef(({ fullPackage }, ref) => {
       })
     );
   };
+
+  const solutionReduxState = useSelector(
+    (state) => state.subscriptionForm.solution
+  );
 
   const standardTable = (
     <div id="FullPackage">
@@ -205,7 +211,7 @@ const Category = forwardRef(({ fullPackage }, ref) => {
               value="Gardening Services"
             />
             <label
-              class="btn"
+              class="btn btn-outline-primary"
               for="btncheck6"
               style={{ borderRadius: "50%" }}
             ></label>
