@@ -40,7 +40,11 @@ const NavigationBar = ({ isEnterprise }) => {
   }, [scrolled]);
 
   const handleSubscribeNowClick = () => {
-    dispatch(modalActions.hideSubscriptionFormModal());
+    switch (isEnterprise) {
+      case true:
+        dispatch(modalActions.showSubscriptionFormModal());
+        break;
+    }
   };
 
   return (

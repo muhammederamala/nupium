@@ -10,7 +10,7 @@ function SubscriptionForm() {
   const showModal = useSelector((state) => state.modal.subscriptionFormModal);
 
   const onHideHandler = () => {
-    dispatch(modalActions.hideServicesModal());
+    dispatch(modalActions.hideSubscriptionFormModal());
   };
 
   // Refs for form inputs
@@ -31,12 +31,13 @@ function SubscriptionForm() {
   const businessNameRef = useRef(null);
   const categoryTypeRef = useRef(null);
   const activationDateRef = useRef(null);
-  const timingsRef = useRef(null); // Define timingsRef
+  const timingsRef = useRef(null);
   const solutionRef = useRef(null);
 
-  const handleCheckboxChange = (e) => {
-    // Handle checkbox changes here
-  };
+  const [solution, setSolution] = useState();
+  const solutionReduxState = useSelector(
+    (state) => state.subscriptionForm.solution
+  );
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -58,10 +59,10 @@ function SubscriptionForm() {
       businessName: businessNameRef.current.value,
       categoryType: categoryTypeRef.current.value,
       activationDate: activationDateRef.current.value,
-      // Add timings here
+      solution: solutionReduxState,
       timings: Array.from(
         timingsRef.current.querySelectorAll('input[type="checkbox"]:checked')
-      ).map((checkbox) => checkbox.value), // Collect selected timings
+      ).map((checkbox) => checkbox.value),
     };
     console.log(formData);
   };

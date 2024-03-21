@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
-import { UseDispatch, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { modalActions } from "../../redux";
 
 import styles from "./FooterComponent.module.css";
@@ -38,9 +38,9 @@ function FooterComponent() {
     dispatch(modalActions.showDashboardModal());
   };
 
-  const handleCorporateOffices = () =>{
-    dispatch(modalActions.showCorporateOfficesModal())
-  }
+  const handleCorporateOffices = () => {
+    dispatch(modalActions.showCorporateOfficesModal());
+  };
 
   return (
     <footer className={`footer ${styles.footerComponent}`}>
@@ -109,7 +109,12 @@ function FooterComponent() {
               </Row>
               <Row className={`${styles.footerRows}`}>
                 <Col md={12}>
-                  <h6 className={styles.footerHeading} onClick={handleCorporateOffices}>Corporate Offices</h6>
+                  <h6
+                    className={styles.footerHeading}
+                    onClick={handleCorporateOffices}
+                  >
+                    Corporate Offices
+                  </h6>
                 </Col>
               </Row>
               <Row className={`${styles.footerRows}`}>

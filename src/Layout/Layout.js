@@ -10,13 +10,14 @@ function Layout() {
   const location = useLocation();
   const [hideLayouts, setHideLayouts] = useState(false);
 
-  useEffect(() => {
-    setHideLayouts(location.pathname == "/");
-  }, [location.pathname]);
-
   const [isEnterprise, setIsEnterprise] = useState(
     location.pathname.startsWith("/enterprise")
   );
+
+  useEffect(() => {
+    setHideLayouts(location.pathname == "/");
+    setIsEnterprise(location.pathname.startsWith("/enterprise"));
+  }, [location.pathname]);
 
   return (
     <Fragment>

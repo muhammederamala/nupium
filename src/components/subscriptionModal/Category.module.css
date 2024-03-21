@@ -1,0 +1,25 @@
+.selectButton {
+  background-color: white;
+  color: #02abb6;
+  font-weight: 600;
+  width: 5rem;
+  transition: transform 0.3s;
+  border: none;
+  border-radius: 7px;
+  width: 100%;
+}
+
+.selectButton:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+}
+
+/* .selectButton:active {
+  background-color: #02abb6;
+  color: white;
+} */
+
+.btnActive {
+  background-color: #02abb6;
+  color: white;
+}

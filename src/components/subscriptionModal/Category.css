@@ -5,3 +5,8 @@
 .unselected {
   display: none;
 }
+
+.btnActive {
+  background-color: #02abb6;
+  color: white;
+}

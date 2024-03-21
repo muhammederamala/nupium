@@ -95,7 +95,50 @@ const modalSlice = createSlice({
       state.subscriptionFormModal = true;
     },
     hideSubscriptionFormModal(state) {
-      state.subscriptionFormModal = true;
+      state.subscriptionFormModal = false;
+    },
+  },
+});
+
+const initialSubscriptionForm = {
+  country: "",
+  password: "",
+  email: "",
+  firstName: "",
+  middleName: "",
+  lastName: "",
+  contact: "",
+  address: "",
+  propertyNo: "",
+  streetName: "",
+  city: "",
+  state: "",
+  landMark: "",
+  zipCode: "",
+  BusinessName: "",
+  CategoryType: "",
+  ActivationDate: "",
+  timingSchedule: "",
+  solution: { solutionType: "", selectedSolutions: "" },
+};
+
+const subscriptionFormSlice = createSlice({
+  name: "subscriptionForm",
+  initialState: initialSubscriptionForm,
+  reducers: {
+    setSelectedSolutionType(state, action) {
+      const { solutionType } = action.payload;
+      state.solution = {
+        ...state.solution,
+        solutionType: solutionType,
+      };
+    },
+    setSelectedSolutions(state, action) {
+      const { selectedSolutions } = action.payload;
+      state.solution = {
+        ...state.solution,
+        selectedSolutions: selectedSolutions,
+      };
     },
   },
 });
@@ -103,9 +146,11 @@ const modalSlice = createSlice({
 const store = configureStore({
   reducer: {
     modal: modalSlice.reducer,
+    subscriptionForm: subscriptionFormSlice.reducer,
   },
 });
 
 export const modalActions = modalSlice.actions;
+export const subscriptionFormActions = subscriptionFormSlice.actions;
 
 export default store;
