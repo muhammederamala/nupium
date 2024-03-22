@@ -12,6 +12,7 @@ const initialModalState = {
   dashboardModal: false,
   corporateOfficesModal: false,
   subscriptionFormModal: false,
+  welcomeModal: false,
 };
 
 const modalSlice = createSlice({
@@ -97,6 +98,14 @@ const modalSlice = createSlice({
     hideSubscriptionFormModal(state) {
       state.subscriptionFormModal = false;
     },
+
+    //welcome
+    showWelcomeModal(state) {
+      state.welcomeModal = true;
+    },
+    hideWelcomeModal(state) {
+      state.welcomeModal = false;
+    },
   },
 });
 
@@ -141,6 +150,17 @@ const subscriptionFormSlice = createSlice({
       };
     },
   },
+});
+
+const initialUserState = {
+  individual: false,
+  enterprise: false,
+};
+
+const userLoginSlice = createSlice({
+  name: "userLogin",
+  initialState: initialUserState,
+  reducers: {},
 });
 
 const store = configureStore({

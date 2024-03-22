@@ -15,13 +15,13 @@ function Layout() {
   );
 
   useEffect(() => {
-    setHideLayouts(location.pathname == "/");
+    // setHideLayouts(location.pathname == "/");
     setIsEnterprise(location.pathname.startsWith("/enterprise"));
   }, [location.pathname]);
 
   return (
     <Fragment>
-      {!hideLayouts && <NavigationBar isEnterprise={isEnterprise} />}
+      <NavigationBar isEnterprise={isEnterprise} />
       <main>
         <Outlet />
       </main>

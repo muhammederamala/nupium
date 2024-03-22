@@ -1,0 +1,19 @@
+.buttonContainer {
+  padding: 5rem;
+}
+
+.buttons {
+  padding: 1rem;
+  background-color: #02abb6;
+  color: white;
+  border: none;
+  font-weight: 800;
+  width: 70%;
+  transition: transform 0.3s;
+}
+
+.buttons:hover {
+  transform: scale(1.04);
+  background-color: #02abb6;
+  color: white;
+}

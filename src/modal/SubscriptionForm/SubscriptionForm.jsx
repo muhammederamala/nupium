@@ -34,9 +34,9 @@ function SubscriptionForm() {
   const timingsRef = useRef(null);
   const solutionRef = useRef(null);
 
-  // const solutionReduxState = useSelector(
-  //   (state) => state.subscriptionForm.solution
-  // );
+  const solutionReduxState = useSelector(
+    (state) => state.subscriptionForm.solution
+  );
 
   const handleSubmit = (e) => {
     e.preventDefault();

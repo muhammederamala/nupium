@@ -1,23 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Card, Image } from "react-bootstrap";
+import { useDispatch } from "react-redux";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHouseCircleCheck,
   faLocationDot,
   faSquareCheck,
-  faGlobe,
-  faArrowLeft,
-  faArrowRight,
-  faArrowDownLong,
-  faComputer,
-  faCircleInfo,
-  faCircleCheck,
-  faEnvelope,
-  faCreditCard,
-  faUser,
-  faTruck,
-  faUserNurse,
 } from "@fortawesome/free-solid-svg-icons";
 
 import mainVideo from "../../assets/videos/main.mp4";
@@ -35,6 +24,7 @@ import BenifitsTable from "../../components/BenifitsTable/BenifitsTable";
 import FeaturesScroll from "../../components/featuresScroll/FeaturesScroll";
 import Locations from "../../components/Locations/Locations";
 import SubscriptionSection from "../../components/subscriptionSection/SubscriptionSection";
+import { modalActions } from "../../redux";
 
 function HomePage() {
   const welcomeTextValue = [
@@ -43,24 +33,11 @@ function HomePage() {
     "Computer Maintenance",
   ];
 
-  const [reachedSection4, setReachedSection4] = useState(false);
-
+  const dispatch = useDispatch();
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const threshold = 2400;
-      if (scrollPosition >= threshold) {
-        setReachedSection4(true);
-      } else {
-        setReachedSection4(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    setTimeout(() => {
+      dispatch(modalActions.showWelcomeModal());
+    }, 10000);
   }, []);
 
   const asiaPacificCountries = [

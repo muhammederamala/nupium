@@ -1,11 +1,12 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { useNavigate } from "react-router";
 
 import styles from "./WelcomePage.module.css";
+import { useDispatch } from "react-redux";
+import { modalActions } from "../../redux";
 
 function WelcomePage() {
-  const navigate = useNavigate();
+  const dispatch = useDispatch();
   return (
     <>
       <Container
@@ -21,7 +22,7 @@ function WelcomePage() {
               >
                 <button
                   onClick={() => {
-                    navigate("/individual");
+                    dispatch(modalActions.hideWelcomeModal());
                   }}
                   className={`${styles.buttons}`}
                 >
@@ -49,12 +50,7 @@ function WelcomePage() {
                 md={12}
                 className="d-flex justify-content-center align-items-center py-5"
               >
-                <button
-                  onClick={() => {
-                    navigate("/enterprise");
-                  }}
-                  className={`${styles.buttons}`}
-                >
+                <button className={`${styles.buttons}`}>
                   Login as Enterprise
                 </button>
               </Col>
