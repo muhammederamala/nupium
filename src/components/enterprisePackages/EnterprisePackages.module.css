@@ -1,0 +1,9 @@
+.tableHeader {
+  background-color: #02abb6 !important; /* Using !important to override any other styles */
+  color: white !important;
+}
+
+.tableRowHeight {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

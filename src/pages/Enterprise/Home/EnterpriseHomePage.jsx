@@ -23,6 +23,7 @@ import BenifitsTable from "../../../components/BenifitsTable/BenifitsTable";
 import FeaturesScroll from "../../../components/featuresScroll/FeaturesScroll";
 import Locations from "../../../components/Locations/Locations";
 import SubscriptionSection from "../../../components/subscriptionSection/SubscriptionSection";
+import EnterprisePackages from "../../../components/enterprisePackages/EnterprisePackages";
 
 function EnterpriseHomePage() {
   const welcomeTextValue = [
@@ -202,11 +203,7 @@ function EnterpriseHomePage() {
                     <Col xs={3}>
                       <Card className={`${styles.milestones}`}>
                         <Card.Body style={{ padding: "0px" }}>
-                          <h1
-                            className={`${styles.milestonesNumber}`}
-                          >
-                            250+
-                          </h1>
+                          <h1 className={`${styles.milestonesNumber}`}>250+</h1>
                         </Card.Body>
                         <Card.Footer
                           style={{ padding: "0px", marginTop: "0.rem" }}
@@ -219,9 +216,7 @@ function EnterpriseHomePage() {
                     <Col xs={3}>
                       <Card className={`${styles.milestones}`}>
                         <Card.Body style={{ padding: "0px" }}>
-                          <h1
-                            className={`${styles.milestonesNumber}`}
-                          >
+                          <h1 className={`${styles.milestonesNumber}`}>
                             Globally
                           </h1>
                         </Card.Body>
@@ -300,121 +295,6 @@ function EnterpriseHomePage() {
         </Container>
       </section>
 
-      {/* <section style={{ marginTop: "3rem" }}>
-        <Container>
-          <Row className="text-center">
-            <h1 style={{ fontWeight: "800" }}>How We Operate</h1>
-          </Row>
-          <Row className="mt-4">
-            <Col style={{ marginTop: "2rem" }} md={4}>
-              <Container>
-                <Row className="d-flex justify-content-center">
-                  <div
-                    className={`${
-                      styles.section4circle
-                    } d-flex justify-content-center align-items-center ${
-                      reachedSection4
-                        ? "animate__animated animate__fadeInUp"
-                        : ""
-                    }`}
-                  >
-                    <h1 className={`${styles.section4number}`}>1</h1>
-                  </div>
-                </Row>
-                <Row className="d-flex justify-content-center mt-3">
-                  <div className={`${styles.sectionNumberBox}`}>
-                    <Container>
-                      <Row className="d-flex text-center">
-                        <h1 className={`${styles.section4heading}`}>
-                          Make An Offer
-                        </h1>
-                      </Row>
-                      <Row className="d-flex text-center">
-                        <p className={`${styles.section4paragraph}`}>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Ut elit tellus, luctus nec ullamcorper mattis,
-                          pulvinar dapibus leo.
-                        </p>
-                      </Row>
-                    </Container>
-                  </div>
-                </Row>
-              </Container>
-            </Col>
-            <Col style={{ marginTop: "2rem" }} md={4}>
-              <Container>
-                <Row className="d-flex justify-content-center">
-                  <div
-                    className={`${
-                      styles.section4circle
-                    } d-flex justify-content-center align-items-center ${
-                      reachedSection4
-                        ? "animate__animated animate__fadeInUp"
-                        : ""
-                    }`}
-                  >
-                    <h1 className={`${styles.section4number}`}>2</h1>
-                  </div>
-                </Row>
-                <Row className="d-flex justify-content-center mt-3">
-                  <div className={`${styles.sectionNumberBox}`}>
-                    <Container>
-                      <Row className="d-flex text-center">
-                        <h1 className={`${styles.section4heading}`}>
-                          We Call & Deals
-                        </h1>
-                      </Row>
-                      <Row className="d-flex text-center">
-                        <p className={`${styles.section4paragraph}`}>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Ut elit tellus, luctus nec ullamcorper mattis,
-                          pulvinar dapibus leo.
-                        </p>
-                      </Row>
-                    </Container>
-                  </div>
-                </Row>
-              </Container>
-            </Col>
-            <Col style={{ marginTop: "2rem" }} md={4}>
-              <Container>
-                <Row className="d-flex justify-content-center">
-                  <div
-                    className={`${
-                      styles.section4circle
-                    } d-flex justify-content-center align-items-center ${
-                      reachedSection4
-                        ? "animate__animated animate__fadeInUp"
-                        : ""
-                    }`}
-                  >
-                    <h1 className={`${styles.section4number}`}>3</h1>
-                  </div>
-                </Row>
-                <Row className="d-flex justify-content-center mt-3">
-                  <div className={`${styles.sectionNumberBox}`}>
-                    <Container>
-                      <Row className="d-flex text-center">
-                        <h1 className={`${styles.section4heading}`}>
-                          Our Team Work
-                        </h1>
-                      </Row>
-                      <Row className="d-flex text-center">
-                        <p className={`${styles.section4paragraph}`}>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Ut elit tellus, luctus nec ullamcorper mattis,
-                          pulvinar dapibus leo.
-                        </p>
-                      </Row>
-                    </Container>
-                  </div>
-                </Row>
-              </Container>
-            </Col>
-          </Row>
-        </Container>
-      </section> */}
-
       <section style={{ marginTop: "8rem" }}>
         <Container>
           <Row>
@@ -422,7 +302,7 @@ function EnterpriseHomePage() {
               <Locations />
             </Col>
             <Col md={7}>
-              <BenifitsTable />
+              <EnterprisePackages />
             </Col>
           </Row>
         </Container>

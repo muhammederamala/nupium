@@ -13,6 +13,7 @@ import image3 from "../../assets/images/section2computer.jpg";
 import image4 from "../../assets/images/section2carpenter.jpg";
 import image5 from "../../assets/images/section2cleaning.jpg";
 import image6 from "../../assets/images/section2Premise.jpg";
+import image7 from "../../assets/images/section2landscaping.jpeg";
 
 function ServicesSection() {
   const location = useLocation();
@@ -192,7 +193,7 @@ function ServicesSection() {
                   </button>
                 </span>
               </div>
-              <Image src={image6} fluid className={styles.image} />
+              <Image src={image7} fluid className={styles.image} />
             </div>
           </Col>
         ) : (
