@@ -152,16 +152,16 @@ const subscriptionFormSlice = createSlice({
   },
 });
 
-const initialUserState = {
-  individual: false,
-  enterprise: false,
-};
+// const initialUserState = {
+//   individual: false,
+//   enterprise: false,
+// };
 
-const userLoginSlice = createSlice({
-  name: "userLogin",
-  initialState: initialUserState,
-  reducers: {},
-});
+// const userLoginSlice = createSlice({
+//   name: "userLogin",
+//   initialState: initialUserState,
+//   reducers: {},
+// });
 
 const store = configureStore({
   reducer: {

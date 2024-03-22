@@ -15,17 +15,14 @@ function WelcomeModal({ navigate }) {
 
   const onHideHandler = () => {
     dispatch(modalActions.hideWelcomeModal());
-    window.location.href = '/enterprise'
+    window.location.href = "/enterprise";
   };
 
   return (
     <ModalPortal>
-      <Modal show={showModal} onHide={onHideHandler} size="md">
-        <Modal.Header closeButton></Modal.Header>
+      <Modal show={showModal} size="md">
         <Modal.Body>
-          <Container
-            className="d-flex justify-content-center align-items-center"
-          >
+          <Container className="d-flex justify-content-center align-items-center">
             <Col md={12} className={`${styles.buttonContainer} p-0`}>
               <Container>
                 <Row>
@@ -75,11 +72,6 @@ function WelcomeModal({ navigate }) {
             </Col>
           </Container>
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={onHideHandler}>
-            Close
-          </Button>
-        </Modal.Footer>
       </Modal>
     </ModalPortal>
   );
