@@ -11,6 +11,7 @@ const Category = forwardRef(({ fullPackage }, ref) => {
   const [selected, setSelected] = useState("");
 
   const selectOnClickHandler = (e) => {
+    e.preventDefault()
     setSelected(e.target.value);
     dispatch(
       subscriptionFormActions.setSelectedSolutions({
@@ -30,9 +31,14 @@ const Category = forwardRef(({ fullPackage }, ref) => {
     );
   };
 
-  const solutionReduxState = useSelector(
-    (state) => state.subscriptionForm.solution
-  );
+  const handleAsPerServiceSolutionsClick = (e) => {
+    setSelected(e.target.value);
+    dispatch(
+      subscriptionFormActions.setAsPerServiceSelectedSolutions({
+        selectedSolutions: e.target.value,
+      })
+    );
+  }
 
   const standardTable = (
     <div id="FullPackage">
@@ -83,9 +89,8 @@ const Category = forwardRef(({ fullPackage }, ref) => {
                 id="selectBtn"
                 onClick={selectOnClickHandler}
                 value="Package Standard"
-                className={`${styles.selectButton} ${
-                  selected == "Package Standard" ? styles.btnActive : ""
-                }`}
+                className={`${styles.selectButton} ${selected == "Package Standard" ? styles.btnActive : ""
+                  }`}
               >
                 SELECT
               </button>
@@ -95,9 +100,8 @@ const Category = forwardRef(({ fullPackage }, ref) => {
                 id="selectBtn"
                 value="Package Growth"
                 onClick={selectOnClickHandler}
-                className={`${styles.selectButton} ${
-                  selected == "Package Growth" ? styles.btnActive : ""
-                }`}
+                className={`${styles.selectButton} ${selected == "Package Growth" ? styles.btnActive : ""
+                  }`}
               >
                 SELECT
               </button>
@@ -124,6 +128,7 @@ const Category = forwardRef(({ fullPackage }, ref) => {
             <td>Electrical & Electronics Maintenance</td>
             <td>90</td>
             <input
+              onClick={handleAsPerServiceSolutionsClick}
               type="checkbox"
               class="btn-check"
               id="btncheck1"
@@ -132,7 +137,7 @@ const Category = forwardRef(({ fullPackage }, ref) => {
             />
             <label
               class="btn btn-outline-primary"
-              for="btncheck1"
+              htmlFor="btncheck1"
               style={{ borderRadius: "50%" }}
             ></label>
           </tr>
@@ -140,6 +145,7 @@ const Category = forwardRef(({ fullPackage }, ref) => {
             <td>Plumbing Maintenance</td>
             <td>90</td>
             <input
+              onClick={handleAsPerServiceSolutionsClick}
               type="checkbox"
               class="btn-check"
               id="btncheck2"
@@ -148,7 +154,7 @@ const Category = forwardRef(({ fullPackage }, ref) => {
             />
             <label
               class="btn btn-outline-primary"
-              for="btncheck2"
+              htmlFor="btncheck2"
               style={{ borderRadius: "50%" }}
             ></label>
           </tr>
@@ -156,6 +162,7 @@ const Category = forwardRef(({ fullPackage }, ref) => {
             <td>Computer System Maintenance (Hardware & Software)</td>
             <td>90</td>
             <input
+              onClick={handleAsPerServiceSolutionsClick}
               type="checkbox"
               class="btn-check"
               id="btncheck3"
@@ -164,7 +171,7 @@ const Category = forwardRef(({ fullPackage }, ref) => {
             />
             <label
               class="btn btn-outline-primary"
-              for="btncheck3"
+              htmlFor="btncheck3"
               style={{ borderRadius: "50%" }}
             ></label>
           </tr>
@@ -172,6 +179,7 @@ const Category = forwardRef(({ fullPackage }, ref) => {
             <td>Carpenter Services</td>
             <td>90</td>
             <input
+              onClick={handleAsPerServiceSolutionsClick}
               type="checkbox"
               class="btn-check"
               id="btncheck4"
@@ -180,7 +188,7 @@ const Category = forwardRef(({ fullPackage }, ref) => {
             />
             <label
               class="btn btn-outline-primary"
-              for="btncheck4"
+              htmlFor="btncheck4"
               style={{ borderRadius: "50%" }}
             ></label>
           </tr>
@@ -188,6 +196,7 @@ const Category = forwardRef(({ fullPackage }, ref) => {
             <td>Housekeeping Services (Cleaning Services)</td>
             <td>120</td>
             <input
+              onClick={handleAsPerServiceSolutionsClick}
               type="checkbox"
               class="btn-check"
               id="btncheck5"
@@ -196,7 +205,7 @@ const Category = forwardRef(({ fullPackage }, ref) => {
             />
             <label
               class="btn btn-outline-primary"
-              for="btncheck5"
+              htmlFor="btncheck5"
               style={{ borderRadius: "50%" }}
             ></label>
           </tr>
@@ -204,6 +213,7 @@ const Category = forwardRef(({ fullPackage }, ref) => {
             <td>Gardening Services</td>
             <td>120</td>
             <input
+              onClick={handleAsPerServiceSolutionsClick}
               type="checkbox"
               class="btn-check"
               id="btncheck6"
@@ -212,7 +222,7 @@ const Category = forwardRef(({ fullPackage }, ref) => {
             />
             <label
               class="btn btn-outline-primary"
-              for="btncheck6"
+              htmlFor="btncheck6"
               style={{ borderRadius: "50%" }}
             ></label>
           </tr>
@@ -233,7 +243,6 @@ const Category = forwardRef(({ fullPackage }, ref) => {
           ref={ref}
           onChange={handleOptionClick}
         >
-          <option value="">Select Category Type</option>
           <option value="Full Package">Full Package</option>
           <option value="As Per Services">As Per Services</option>
         </select>

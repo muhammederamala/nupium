@@ -16,6 +16,7 @@ const ModalPortal = ({ children }) => {
   el.style.display = "flex";
   el.style.alignItems = "center";
   el.style.justifyContent = "center";
+  el.style.padding = "0px"
 
   return ReactDOM.createPortal(children, el);
 };

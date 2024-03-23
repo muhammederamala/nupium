@@ -54,7 +54,7 @@ function DeleteSubjectModal() {
     },
     {
       serviceId: "3",
-      serviceContent: [
+      offlineSupport: [
         "Computer or Desktop deployment, relocation and setup",
         "Virus and spyware removal & malicious software prevention",
         "Hardware Installations, & upgrading memory, hard drives, SSD’s video cards, disc drives etc",
@@ -66,6 +66,19 @@ function DeleteSubjectModal() {
         "Email and messaging configuration and support",
         "Data backup & recovery solutions",
         "Password recovery services",
+      ],
+      onlineSupport: [
+        "Locating and removing viruses and other malicious software from the system",
+        "Tuning up a personal computer, helping it to start and function much faster",
+        "Configuring & repairing email access clients, such as outlook, and their associated data files",
+        "Configuring external devices, such as printers, scanners, and external storage drives",
+        "Performing standard routine maintenance such as examining system logs for issues",
+        "Assisting in data back-up processes and migrating data between multiple computers in a network",
+        "Checking network connections for possible vulnerabilities",
+        "Resolving various software and hardware conflicts",
+        "Assisting in the installation and upgrading of various software packages",
+        "Repairing errors that cause a computer to lock or freeze up",
+        "Setting up secure wireless networks once the proper equipment connections are in place"
       ],
     },
     {
@@ -127,6 +140,23 @@ function DeleteSubjectModal() {
     },
   ];
 
+  const computerServicesContent = (
+    <div>
+      <h5>Offline Support</h5>
+      <ul>
+        {serviceContent[2].offlineSupport.map((content, index) => (
+          <li key={index}>{content}</li>
+        ))}
+      </ul>
+      <h5>Online Support</h5>
+      <ul>
+        {serviceContent[2].onlineSupport.map((content, index) => (
+          <li key={index}>{content}</li>
+        ))}
+      </ul>
+    </div>
+  );
+
   useEffect(() => {
     const filtered = serviceContent.filter(
       (service) => service.serviceId == serviceId
@@ -143,9 +173,13 @@ function DeleteSubjectModal() {
         <Modal.Body>
           <ul>
             {selectedService.map((service) =>
-              service.serviceContent.map((content, index) => (
-                <li key={index}>{content}</li>
-              ))
+              service.serviceId != 3 ? (
+                service.serviceContent.map((content, index) => (
+                  <li key={index}>{content}</li>
+                ))
+              ) : (
+                computerServicesContent
+              )
             )}
           </ul>
         </Modal.Body>

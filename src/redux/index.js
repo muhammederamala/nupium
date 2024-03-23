@@ -128,25 +128,52 @@ const initialSubscriptionForm = {
   CategoryType: "",
   ActivationDate: "",
   timingSchedule: "",
-  solution: { solutionType: "", selectedSolutions: "" },
+  solution: { solutionType: "Full Package", selectedSolutions: [] },
 };
 
 const subscriptionFormSlice = createSlice({
   name: "subscriptionForm",
   initialState: initialSubscriptionForm,
   reducers: {
+    // to set the solution type, full package or as per service
     setSelectedSolutionType(state, action) {
       const { solutionType } = action.payload;
       state.solution = {
-        ...state.solution,
+        selectedSolutions: [],
         solutionType: solutionType,
       };
     },
+    
+    // to set the different solutions when user chooses as per service
+    setAsPerServiceSelectedSolutions(state, action) {
+      const { selectedSolutions } = action.payload;
+      if (state.solution.selectedSolutions.includes(selectedSolutions)) {
+        const updatedSelectedSolutions =
+          state.solution.selectedSolutions.filter(
+            (sol) => sol != selectedSolutions
+          );
+
+        state.solution = {
+          ...state.solution,
+          selectedSolutions: [...updatedSelectedSolutions],
+        };
+      } else {
+        state.solution = {
+          ...state.solution,
+          selectedSolutions: [
+            ...state.solution.selectedSolutions,
+            selectedSolutions,
+          ],
+        };
+      }
+    },
+
+    // to set whether user chooses standard or growth package in full package
     setSelectedSolutions(state, action) {
       const { selectedSolutions } = action.payload;
       state.solution = {
         ...state.solution,
-        selectedSolutions: selectedSolutions,
+        selectedSolutions: [selectedSolutions],
       };
     },
   },
