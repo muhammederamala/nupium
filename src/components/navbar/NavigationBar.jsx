@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { UseDispatch, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faRepeat } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
   faInstagram,
@@ -49,9 +50,8 @@ const NavigationBar = ({ isEnterprise }) => {
 
   return (
     <Navbar
-      className={`${
-        scrolled ? styles.navbarCustomScrolled : styles.navbarCustom
-      }`}
+      className={`${scrolled ? styles.navbarCustomScrolled : styles.navbarCustom
+        }`}
       expand="lg"
       variant={`${scrolled ? "light" : "dark"}`}
       fixed="top"
@@ -72,9 +72,8 @@ const NavigationBar = ({ isEnterprise }) => {
         >
           <Nav className="mx-auto">
             <div
-              className={`d-flex justify-content-center px-2 mx-2 ${
-                scrolled ? styles.scrolledNavItem : styles.navItem
-              }`}
+              className={`d-flex justify-content-center px-2 mx-2 ${scrolled ? styles.scrolledNavItem : styles.navItem
+                }`}
               style={{ padding: "10px" }}
               onClick={handleSubscribeNowClick}
             >
@@ -91,16 +90,22 @@ const NavigationBar = ({ isEnterprise }) => {
               isEnterprise={isEnterprise}
             />
             <div
-              className={`d-flex align-items-center justify-content-center px-2 mx-2 ${
-                scrolled ? styles.scrolledNavItem : styles.navItem
-              }`}
+              className={`d-flex align-items-center justify-content-center px-2 mx-2 ${scrolled ? styles.scrolledNavItem : styles.navItem
+                }`}
               style={{ padding: "10px" }}
             >
               Blogs
             </div>
+            <Link
+              to={isEnterprise ? "/" : '/enterprise'}
+              className={`d-flex align-items-center justify-content-center px-2 mx-2 ${scrolled ? styles.scrolledNavItem : styles.navItem
+                }`}
+              style={{ padding: "10px" }}
+            >
+              <FontAwesomeIcon icon={faRepeat} />
+            </Link>
           </Nav>
           <div>
-            {/* <p>Lang</p> */}
             <FontAwesomeIcon
               className={`mx-2 ${styles.socialMediaIcons}`}
               icon={faInstagram}
