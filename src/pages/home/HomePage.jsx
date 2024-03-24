@@ -34,10 +34,15 @@ function HomePage() {
   ];
 
   const dispatch = useDispatch();
+
   useEffect(() => {
-    setTimeout(() => {
+    const timeoutId = setTimeout(() => {
       dispatch(modalActions.showWelcomeModal());
-    }, 10000);
+    }, 10 * 1000);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
   }, []);
 
   const asiaPacificCountries = [
