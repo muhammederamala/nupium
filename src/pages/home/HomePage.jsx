@@ -10,6 +10,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import mainVideo from "../../assets/videos/main.mp4";
+import videoSection from "../../assets/videos/main.mp4";
+
 import image7 from "../../assets/images/section3image1.jpg";
 
 import styles from "./HomePage.module.css";
@@ -24,6 +26,7 @@ import BenifitsTable from "../../components/BenifitsTable/BenifitsTable";
 import FeaturesScroll from "../../components/featuresScroll/FeaturesScroll";
 import Locations from "../../components/Locations/Locations";
 import SubscriptionSection from "../../components/subscriptionSection/SubscriptionSection";
+import VideoPlayer from "../../components/VideoSection/VideoPlayer";
 import { modalActions } from "../../redux";
 
 function HomePage() {
@@ -199,7 +202,6 @@ function HomePage() {
                       <Card className={`${styles.milestones}`}>
                         <Card.Body style={{ padding: "0px" }}>
                           <h1
-                            style={{ fontSize: "2.3rem" }}
                             className={`${styles.milestonesNumber}`}
                           >
                             Operations
@@ -223,6 +225,10 @@ function HomePage() {
 
       <section style={{ marginTop: "5rem", marginBottom: "5rem" }}>
         <ServicesSection />
+      </section>
+
+      <section style={{ marginTop: "5rem", marginBottom: "5rem" }}>
+        <VideoPlayer src={videoSection} />
       </section>
 
       <section style={{ marginBottom: "5rem" }}>

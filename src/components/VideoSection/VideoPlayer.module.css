@@ -1,0 +1,10 @@
+.playPauseBtn {
+  color: #02abb6;
+  border: none;
+  background-color: white;
+  font-size: 2.5rem;
+}
+
+.playPauseBtn:hover {
+  cursor: pointer;
+}

@@ -9,6 +9,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import mainVideo from "../../../assets/videos/main.mp4";
+import videoSection from "../../../assets/videos/main.mp4";
+
 import image7 from "../../../assets/images/section3image1.jpg";
 
 import styles from "./EnterpriseHomePage.module.css";
@@ -24,6 +26,7 @@ import FeaturesScroll from "../../../components/featuresScroll/FeaturesScroll";
 import Locations from "../../../components/Locations/Locations";
 import SubscriptionSection from "../../../components/subscriptionSection/SubscriptionSection";
 import EnterprisePackages from "../../../components/enterprisePackages/EnterprisePackages";
+import VideoPlayer from "../../../components/VideoSection/VideoPlayer";
 
 function EnterpriseHomePage() {
   const welcomeTextValue = [
@@ -156,7 +159,7 @@ function EnterpriseHomePage() {
         <div className={`${styles.formOverlay}`}>
           <Container>
             <Row style={{ marginTop: "5rem" }}>
-              <Col style={{ marginTop: "5rem" }} md={8}>
+              <Col style={{ marginTop: "5rem" }} md={9}>
                 <Container>
                   <Row>
                     <Col md={12}>
@@ -215,7 +218,7 @@ function EnterpriseHomePage() {
                     </Col>
                     <Col xs={3}>
                       <Card className={`${styles.milestones}`}>
-                        <Card.Body style={{ padding: "0px" }}>
+                        <Card.Body style={{ padding: "0px", fontSize: "2rem" }}>
                           <h1 className={`${styles.milestonesNumber}`}>
                             Globally
                           </h1>
@@ -238,6 +241,10 @@ function EnterpriseHomePage() {
 
       <section style={{ marginTop: "5rem", marginBottom: "5rem" }}>
         <ServicesSection />
+      </section>
+
+      <section style={{ marginTop: "5rem", marginBottom: "5rem" }}>
+        <VideoPlayer src={videoSection} />
       </section>
 
       <section style={{ marginBottom: "5rem" }}>
