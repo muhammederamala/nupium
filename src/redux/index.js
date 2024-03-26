@@ -13,6 +13,7 @@ const initialModalState = {
   corporateOfficesModal: false,
   subscriptionFormModal: false,
   welcomeModal: false,
+  managementModal: false,
 };
 
 const modalSlice = createSlice({
@@ -106,6 +107,14 @@ const modalSlice = createSlice({
     hideWelcomeModal(state) {
       state.welcomeModal = false;
     },
+
+    // management
+    showManagementModal(state) {
+      state.managementModal = true;
+    },
+    hideManagementModal(state) {
+      state.managementModal = false;
+    },
   },
 });
 
@@ -143,7 +152,7 @@ const subscriptionFormSlice = createSlice({
         solutionType: solutionType,
       };
     },
-    
+
     // to set the different solutions when user chooses as per service
     setAsPerServiceSelectedSolutions(state, action) {
       const { selectedSolutions } = action.payload;

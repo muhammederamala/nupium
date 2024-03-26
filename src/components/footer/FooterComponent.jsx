@@ -42,6 +42,10 @@ function FooterComponent() {
     dispatch(modalActions.showCorporateOfficesModal());
   };
 
+  const ManagementClickHandler = () => {
+    dispatch(modalActions.showManagementModal())
+  }
+
   return (
     <footer className={`footer ${styles.footerComponent}`}>
       <Container className="py-5">
@@ -60,7 +64,7 @@ function FooterComponent() {
               </Row>
               <Row className={`${styles.footerRows}`}>
                 <Col md={12}>
-                  <h6 className={styles.footerHeading}>Management</h6>
+                  <h6 className={styles.footerHeading} onClick={ManagementClickHandler}>Management</h6>
                 </Col>
               </Row>
               <Row className={`${styles.footerRows}`}>

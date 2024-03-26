@@ -18,6 +18,7 @@ import WelcomeModal from "./modal/Welcome/WelcomeModal";
 import { modalActions } from "./redux";
 import { useDispatch } from "react-redux";
 import Router from "./routes/Route";
+import ManagementModal from "./modal/management/ManagementModal";
 
 function App() {
   const dispatch = useDispatch();
@@ -39,6 +40,7 @@ function App() {
       <CorporateOfficesModal />
       <SubscrptionForm />
       <WelcomeModal />
+      <ManagementModal />
       <RouterProvider router={Router}></RouterProvider>
     </div>
   );
