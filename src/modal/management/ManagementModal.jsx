@@ -94,13 +94,61 @@ function ManagementModal() {
                                             <Col md={12}>
                                                 <h3 className={`${styles.name}`}>Ms. Giovanna G.</h3>
                                                 <p className={`${styles.paragraph}`} style={{ marginTop: "1rem" }}>As a visionary leader, Michael A. Glickman is a seasoned executive with a proven
-                                                    track record of driving innovation, growth, and sustainable success in the
-                                                    multiple business sectors. With an unwavering commitment to excellence and a
-                                                    passion for transformative leadership, Michael brings a wealth of experience to
-                                                    the executive team</p>
+                                                    Giovanna Garcia is a highly accomplished woman in the realm of commercial partnerships,
+                                                    focused on fostering relationships that generate dual-benefit outcomes for various
+                                                    companies, with a commitment to steering us towards sustainable success.
+                                                </p>
                                             </Col>
                                         </Row>
                                     </Container>
+                                </Col>
+                            </Row>
+                            <Row className="mt-4">
+                                <Col md={12}>
+                                    <p className={`${styles.paragraph}`} >
+                                        Focused on
+                                        strategic development of partner channels and possessing an innate passion for forging
+                                        solid, mutually beneficial relationships, Giovanna Garcia is a visionary leader in the field of
+                                        business alliances. With over 9 years of experience in the [specific industry], she has
+                                        consistently demonstrated her ability to drive business growth through strategic
+                                        collaborations and effective partner management.
+
+                                    </p>
+                                </Col>
+                            </Row>
+                            <Row className="mt-5">
+                                <Col md={12}>
+                                    <h5 className={`${styles.heading}`}>Professional Background:</h5>
+                                    <p className={`${styles.paragraph}`} >
+                                        Giovanna Garcia boasts a proven 9-year track record in the realm of commercial
+                                        partnerships, having held various positions ranging from business exchanges to partner
+                                        channel management, successfully spearheading international partner expansion programs.
+                                        Her customer-centric approach and knack for identifying collaboration opportunities have
+                                        been foundational pillars in her career.
+
+                                    </p>
+                                </Col>
+                            </Row>
+                            <Row className="mt-4">
+                                <Col md={12}>
+                                    <h5 className={`${styles.heading}`}>Strategic Vision:</h5>
+                                    <p className={`${styles.paragraph}`} >
+                                        Giovanna Garcia's strategic vision for a Partner Channel is centered around establishing and
+                                        managing solid, mutually beneficial relationships with commercial partners to drive business
+                                        growth. Focused on creating new alliances, developing mutually beneficial programs, and
+                                        managing relationships, she is deeply motivated by market innovation and the pursuit of
+                                        opportunities for mutual value creation.
+                                    </p>
+                                </Col>
+                            </Row>
+                            <Row className="mt-4">
+                                <Col md={12}>
+                                    <h5 className={`${styles.heading}`}>Leadership Style:</h5>
+                                    <p className={`${styles.paragraph}`} >
+                                        Her leadership style is characterized by a collaborative, empathetic, results-oriented, and
+                                        innovative approach. She is keenly interested in continual self-development and adapting to
+                                        change
+                                    </p>
                                 </Col>
                             </Row>
                         </Container>
